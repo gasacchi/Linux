@@ -1,0 +1,46 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+[character]
+format = "$symbol [λ ](fg:#CCFA9D)"
+success_symbol = "[](bold fg:#FB9EF8)" 
+error_symbol = "[](bold fg:#FF334E)"
+vicmd_symbol = "[  ](bold fg:#AD9DFA)"
+
+# Battery Module
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[[battery.display]] 
+threshold = 10
+style = "bold #FF334E"
+
+[[battery.display]]
+threshold = 20
+style = "bold #FEEF9A"
+
+# Directory Module
+[directory]
+style = "bold #6E98D3"
+truncation_length = 3
+truncation_symbol = "_/"
+read_only = "  "
+read_only_style = "#FF334E"
+
+# Purescript Module
+[purescript]
+format = "via [$symbol$version](bold #A253BD)"
+symbol = "<≡> "
+
+[ocaml]
+format = "via [$symbol$version](bold fg:#FF334E)"
+symbol = "r "
+
+[package]
+format = "via [ $version](208 bold) "
+
+[lua]
+format = "via [](bold fg:#6E98D3) [$version](bold blue)"
+

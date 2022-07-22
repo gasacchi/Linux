@@ -1,0 +1,85 @@
+# ----------------------------------------------------
+# Editor Configurations
+#-----------------------------------------------------
+
+# Theme ----------------------------------------------
+theme="gasacchi"
+
+# Editor ---------------------------------------------
+[editor]
+line-number = "relative"
+mouse = true
+rulers = [80,]
+
+# LSP ------------------------------------------------
+[editor.lsp]
+display-messages = true
+
+# Cursor ---------------------------------------------
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# Whitespace Render ----------------------------------
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+
+
+# ----------------------------------------------------
+# Keymaps
+#-----------------------------------------------------
+
+# Normal Mode ----------------------------------------
+
+# Buffer ---------------------------------------------
+[keys.normal."space".b]
+b = "buffer_picker"
+n = "goto_next_buffer"
+p = "goto_previous_buffer"
+d = ":buffer-close"
+D = ":buffer-close-others"
+x = ":buffer-close-all"
+
+# Editor ---------------------------------------------
+[keys.normal."space".e]
+c = ":config-open"
+r = ":config-reload"
+t = ":theme"
+
+# File -----------------------------------------------
+[keys.normal."space".f]
+s = ":write"
+S = ":write-quit"
+f = "file_picker_in_current_directory"
+F = "file_picker"
+
+# Window --------------------------------------------
+[keys.normal."space".w]
+w = "no_op"
+C-w = "no_op"
+q = "no_op"
+C-q = "no_op"
+o = "no_op"
+C-o = "no_op"
+n = "rotate_view"
+S = "hsplit_new"
+V = "vsplit_new"
+d = "wclose"
+D = "wonly"
+
+[keys.normal."space"]
+c = "command_mode"
+q = ":quit" # quit helix
+Q = ":quit!" # force quit
+F = "no_op"
+
+# Insert Mode
+[keys.insert]
+j = {  k = "normal_mode" }
