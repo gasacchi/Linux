@@ -57,6 +57,7 @@ pacman -S \
   nerd-fonts-jetbrains-mono \
 
 ### Development tools
+  upwork \ # git clone https://aur.archlinux.org/upwork.git
   kitty \
   fish \ 
   starship \
