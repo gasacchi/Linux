@@ -11,7 +11,7 @@ mouse = true
 line-number = "relative"
 rulers = [80,]
 shell = ["nu", "-c"]
-gutters = ["diagnostics"]
+gutters = ["diagnostics",]
 idle-timeout = 0
 true-color = true
 
@@ -39,26 +39,47 @@ newline = "⏎"
 # Keymaps
 #------------------------------------------------------------------------------
 
+# Normal
+[keys.normal]
+"C-w" = "no_op"
+"["   = "no_op"
+"]"   = "no_op"
+
+# Match and Move
+[keys.normal.m]
+f   = "goto_next_function"
+F   = "goto_prev_function"
+c   = "goto_next_class"
+C   = "goto_prev_class"
+p   = "goto_next_parameter"
+P   = "goto_prev_parameter"
+x   = "goto_next_comment"
+X   = "goto_prev_comment"
+"." = "goto_next_paragraph"
+"," = "goto_prev_paragraph"
+o   = "add_newline_below"
+O   = "add_newline_above"
+
 # Normal Space Mode -----------------------------------------------------------
 [keys.normal."space"]
 "." = "file_picker_in_current_directory"
 "," = "global_search"
-c = "command_mode"
-C = "command_palette"
-q = ":quit" 
-Q = ":quit!"
-F = "no_op"
-h = "no_op"
-p = "no_op"
-P = "no_op"
-y = "no_op"
-Y = "no_op"
-k = "no_op"
-s = "no_op"
-S = "no_op"
-a = "no_op"
-r = "no_op"
-R = "no_op"
+c   = "command_mode"
+C   = "command_palette"
+q   = ":quit" 
+Q   = ":quit!"
+F   = "no_op"
+h   = "no_op"
+p   = "no_op"
+P   = "no_op"
+y   = "no_op"
+Y   = "no_op"
+k   = "no_op"
+s   = "no_op"
+S   = "no_op"
+a   = "no_op"
+r   = "no_op"
+R   = "no_op"
 "/" = "no_op"
 "?" = "no_op"
 
@@ -104,21 +125,6 @@ n = "goto_next_diag"
 f = "goto_first_diag"
 l = "goto_last_diag"
 
-# Move (TS)
-[keys.normal."space".m]
-f = "goto_next_function"
-F = "goto_prev_function"
-c = "goto_next_class"
-C = "goto_prev_class"
-a = "goto_next_parameter"
-A = "goto_prev_parameter"
-x = "goto_next_comment"
-X = "goto_prev_comment"
-p = "goto_next_paragraph"
-P = "goto_prev_paragraph"
-s = "add_newline_below"
-S = "add_newline_above"
-
 # Window ----------------------------------------------------------------------
 [keys.normal."space".w]
 w = "no_op"
@@ -132,7 +138,6 @@ S = "hsplit_new"
 V = "vsplit_new"
 d = "wclose"
 D = "wonly"
-
 
 # Insert Mode -----------------------------------------------------------------
 [keys.insert]
