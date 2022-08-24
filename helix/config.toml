@@ -94,7 +94,6 @@ x = ":buffer-close-all"
 
 # Editor ----------------------------------------------------------------------
 [keys.normal."space".e]
-c = ":config-open"
 r = ":config-reload"
 R = "replace_selections_with_clipboard"
 p = "paste_clipboard_after"
