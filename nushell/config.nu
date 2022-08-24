@@ -12,6 +12,7 @@ alias rm = rm -v
 alias mv = mv -v
 alias cp = cp -v
 alias ln = ln -v
+alias du = dust
 
 ## CLI Tools Aliases
 alias cat = bat
