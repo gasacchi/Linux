@@ -1,0 +1,14 @@
+# Todo list
+- [X] Configure starship themes
+- [X] Configure nushell
+  - [] color_ls
+  - [] scripts
+- [x] Configure zellij
+  - [] issue with copy and pasting text
+- [] Configure gitui
+- [] Configure broot
+  - [] setup verbs
+  - [X] completing themes
+- [] create keymaps to TODO list
+- [] sym link all config to Linux repo
+- [] use org file for note taking

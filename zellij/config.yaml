@@ -1,0 +1,228 @@
+# Zellij Configurations
+
+# Themes (rose pine)
+theme: rose_pine
+themes:
+  rose_pine:
+    fg: "#ebbcba"
+    bg: "#191724"
+    black: "#191724"
+    red: "#eb6f92"
+    green: "#eb6f92" # red
+    yellow: "#f6c177"
+    blue: "#9ccfd8"
+    magenta: "#c4a7e7"
+    cyan: "#ebbcba"
+    white: "#e0def4"
+    orange: "#f6c177"
+    
+ui:
+  pane_frames:
+    rounded_corners: true
+
+# Plugins
+plugins:
+  - path: tab-bar
+    tag: tab-bar
+  - path: status-bar
+    tag: status-bar
+  - path: strider
+    tag: strider
+  - path: compact-bar
+    tag: compact-bar
+  
+# Basic Configuration
+default_shell: nu
+copy_command: "wl-copy"
+copy_on_select: false
+scrollback_editor: /usr/bin/helix
+
+# Keybindings
+keybinds:
+  unbind: true
+  normal:
+    - action: [SwitchToMode: Tmux,]
+      key: [Ctrl: 't']
+  locked:
+    - action: [SwitchToMode: Normal,]
+      key: [Ctrl: 'l']
+  tmux:
+    # Switch Mode
+    - action: [SwitchToMode: Normal,]
+      key: [Ctrl: 't', Char: ' ', Esc,]
+    - action: [SwitchToMode: Locked,]
+      key: [Ctrl: 'l']
+    - action: [SwitchToMode: Resize,]
+      key: [Char: 'r']
+    - action: [SwitchToMode: Scroll,]
+      key: [Char: 'S']
+    - action: [SwitchToMode: EnterSearch,SearchInput: [0],]
+      key: [Char: '.']
+    - action: [SwitchToMode: Session,]
+      key: [Char: ',']
+    - action: [SwitchToMode: RenameTab,TabNameInput: [0],]
+      key: [Char: "'"]
+    - action: [SwitchToMode: RenamePane,PaneNameInput: [0],]
+      key: [Char: 'R']
+    
+    # Quit
+    - action: [Quit,]
+      key: [Char: 'q']
+    
+    # Pane
+    - action: [MoveFocusOrTab: Right,SwitchToMode: Normal,]
+      key: [Char: "\t"]
+    - action: [MoveFocus: Right,SwitchToMode: Normal,]
+      key: [Char: 'l',]
+    - action: [MoveFocus: Left,SwitchToMode: Normal,]
+      key: [Char: 'h',]
+    - action: [MoveFocus: Down,SwitchToMode: Normal,]
+      key: [Char: 'j',]
+    - action: [MoveFocus: Up,SwitchToMode: Normal,]
+      key: [Char: 'k',]
+    - action: [NewPane: Down,SwitchToMode: Normal,]
+      key: [Char: 's',]
+    - action: [NewPane: Right,SwitchToMode: Normal,]
+      key: [Char: 'v',]
+    - action: [CloseFocus,SwitchToMode: Normal,]
+      key: [Char: 'd',]
+    - action: [ToggleFocusFullscreen,SwitchToMode: Normal,]
+      key: [Char: 'f',]
+    
+    # Move Pane
+    - action: [MovePane: Left]
+      key: [Char: 'H',]
+    - action: [MovePane: Right]
+      key: [Char: 'L',]
+    - action: [MovePane: Down]
+      key: [Char: 'J',]
+    - action: [MovePane: Up]
+      key: [Char: 'K',]
+    
+    # Tab
+    - action: [NewTab: , SwitchToMode: Normal,]
+      key: [Char: 't',]
+    - action: [ToggleActiveSyncTab , SwitchToMode: Normal,]
+      key: [Char: 'T',]
+    - action: [GoToPreviousTab, SwitchToMode: Normal,]
+      key: [Char: 'p',]
+    - action: [GoToNextTab, SwitchToMode: Normal,]
+      key: [Char: 'n',]
+    - action: [GoToTab: 1, SwitchToMode: Normal,]
+      key: [Char: '1',]
+    - action: [GoToTab: 2, SwitchToMode: Normal,]
+      key: [Char: '2',]
+    - action: [GoToTab: 3, SwitchToMode: Normal,]
+      key: [Char: '3',]
+    - action: [GoToTab: 4, SwitchToMode: Normal,]
+      key: [Char: '4',]
+    - action: [GoToTab: 5, SwitchToMode: Normal,]
+      key: [Char: '5',]
+  
+  # Resize mode
+  resize:
+    - action: [SwitchToMode: Tmux,]
+      key: [Ctrl: 't',]
+    - action: [SwitchToMode: Normal,]
+      key: [Char: 'r', Char: ' ', Esc,]
+    - action: [Resize: Left,]
+      key: [Char: 'h',]
+    - action: [Resize: Right,]
+      key: [Char: 'l',]
+    - action: [Resize: Down,]
+      key: [Char: 'j',]
+    - action: [Resize: Up,]
+      key: [Char: 'k',]
+  
+  # Scroll Mode
+  scroll:
+    - action: [SwitchToMode: Tmux,]
+      key: [Ctrl: 't',]
+    - action: [SwitchToMode: Normal,]
+      key: [Char: 'S', Char: ' ', Esc,]
+    - action: [ScrollDown,]
+      key: [Char: 'j',]
+    - action: [ScrollUp,]
+      key: [Char: 'k',]
+    - action: [PageScrollDown,]
+      key: [Char: 'f',]
+    - action: [PageScrollUp,]
+      key: [Char: 'b',]
+    - action: [HalfPageScrollDown,]
+      key: [Char: 'd',]
+    - action: [HalfPageScrollUp,]
+      key: [Char: 'u',]
+    - action: [EditScrollback,SwitchToMode: Normal]
+      key: [Char: 'e',]
+    - action: [SwitchToMode: EnterSearch,SearchInput: [0],]
+      key: [Char: '.']
+
+  # Enter Search Mode
+  entersearch:
+    - action: [ScrollToBottom,SearchInput: [27],SwitchToMode: Tmux,]
+      key: [Ctrl: 't',]
+    - action: [ScrollToBottom,SearchInput: [27],SwitchToMode: Normal,]
+      key: [Ctrl: 'c',Esc,]
+    - action: [SwitchToMode: Search,]
+      key: [Char: "\n",]
+
+  # Search Mode
+  search:
+    - action: [SwitchToMode: Tmux,]
+      key: [Ctrl: 't',]
+    - action: [ScrollToBottom,SwitchToMode: Normal,]
+      key: [Char: ' ', Esc, Ctrl: 'c']
+    - action: [SwitchToMode: EnterSearch,SearchInput: [0],]
+      key: [Char: '.',]
+    - action: [ScrollDown,]
+      key: [Char: 'j',]
+    - action: [ScrollUp,]
+      key: [Char: 'k',]
+    - action: [PageScrollDown,]
+      key: [Char: 'f',]
+    - action: [PageScrollUp,]
+      key: [Char: 'b',]
+    - action: [HalfPageScrollDown,]
+      key: [Char: 'd',]
+    - action: [HalfPageScrollUp,]
+      key: [Char: 'u',]
+    - action: [Search: Down,]
+      key: [Char: 'n',]
+    - action: [Search: Up,]
+      key: [Char: 'p',]
+    - action: [Copy: ,]
+      key: [Char: 'c',]
+    - action: [SearchToggleOption: CaseSensitivity,]
+      key: [Char: 'C',]
+    - action: [SearchToggleOption: Wrap,]
+      key: [Char: 'w',]
+    - action: [SearchToggleOption: WholeWord,]
+      key: [Char: 'o',]
+
+  # Session mode
+  session:
+    - action: [SwitchToMode: Tmux,]
+      key: [Ctrl: 't',]
+    - action: [SwitchToMode: Normal,]
+      key: [Char: ',', Char: ' ', Esc,]
+    - action: [Detach,]
+      key: [Char: 'd',]
+  
+  # Rename Tab Mode
+  renametab:
+    - action: [SwitchToMode: Tmux,]
+      key: [Ctrl: 't',]
+    - action: [SwitchToMode: Normal,]
+      key: [Char: "\n",]
+    - action: [UndoRenameTab,SwitchToMode: Normal,]
+      key: [Ctrl: 'c',Esc]
+
+  # Rename Pane Mode
+  renamepane:
+    - action: [SwitchToMode: Tmux,]
+      key: [Ctrl: 't',]
+    - action: [SwitchToMode: Normal,]
+      key: [Char: "\n",]
+    - action: [UndoRenamePane,SwitchToMode: Normal,]
+      key: [Ctrl: 'c', Esc]
+

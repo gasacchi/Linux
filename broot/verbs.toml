@@ -1,0 +1,7 @@
+[[verbs]]
+invocation = "edit"
+key = "F2"
+shortcut = "e"
+apply_to = "file"
+external = "helix {file}"
+leave_broot = true

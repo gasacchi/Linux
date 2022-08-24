@@ -59,7 +59,7 @@ pacman -S \
 ### Development tools
   upwork \ # git clone https://aur.archlinux.org/upwork.git
   kitty \
-  fish \ 
+  nushell \ 
   starship \
   nodejs \
   helix \
@@ -73,7 +73,6 @@ pacman -S \
   kicad \
   kicad-library \
   kicad-library-3d \
-  freecad \
   librecad \
 
 ### Daily Program
@@ -82,24 +81,30 @@ pacman -S \
   mpv \
   virtualbox \
   android-file-transfer \
+  android-tools \
   imagewriter \
 
 ### Terminal Utility
-  bat \
-  fd \
-  exa \
-  dust \
-  duf \
-  ripgrep \
-  tokei \
+  bandwhich \ # see bandwith
+  bat \ # cat alt
+  bottom \ # process monitor
+  broot \ # tree with cd
+  git-delta \ # git log highlighting
+  duf \ # disk utils
+  dust \ # du alt
+  gitui \ # git terminal ui
+  hyperfine \ # benchmark
+  ripgrep \ # rg alt
+  tealdeer \ # tldr alt
+  tokei \ # count LOC
+  zellij \ # multiplexer 
+  
   unrar \
   unzip \
   wget \
   pfetch \
-  git-delta \
-  hyperfine \
+  lolcat \
+  nyancat \
   glow \
-  bottom \
-  zellij \
   yay \
 

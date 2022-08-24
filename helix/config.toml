@@ -1,0 +1,139 @@
+# -----------------------------------------------------------------------------
+# Editor Configurations
+# -----------------------------------------------------------------------------
+
+# Theme -----------------------------------------------------------------------
+theme="rose_pine_fix"
+
+# Editor ----------------------------------------------------------------------
+[editor]
+mouse = true
+line-number = "relative"
+rulers = [80,]
+shell = ["nu", "-c"]
+gutters = ["diagnostics"]
+idle-timeout = 0
+true-color = true
+
+# LSP -------------------------------------------------------------------------
+[editor.lsp]
+display-messages = true
+
+# Cursor ----------------------------------------------------------------------
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# Whitespace Render -----------------------------------------------------------
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+
+# -----------------------------------------------------------------------------
+# Keymaps
+#------------------------------------------------------------------------------
+
+# Normal Space Mode -----------------------------------------------------------
+[keys.normal."space"]
+"." = "file_picker_in_current_directory"
+"," = "global_search"
+c = "command_mode"
+C = "command_palette"
+q = ":quit" 
+Q = ":quit!"
+F = "no_op"
+h = "no_op"
+p = "no_op"
+P = "no_op"
+y = "no_op"
+Y = "no_op"
+k = "no_op"
+s = "no_op"
+S = "no_op"
+a = "no_op"
+r = "no_op"
+R = "no_op"
+"/" = "no_op"
+"?" = "no_op"
+
+# Buffer ----------------------------------------------------------------------
+[keys.normal."space".b]
+b = "buffer_picker"
+n = "goto_next_buffer"
+p = "goto_previous_buffer"
+d = ":buffer-close"
+D = ":buffer-close-others"
+x = ":buffer-close-all"
+
+# Editor ----------------------------------------------------------------------
+[keys.normal."space".e]
+c = ":config-open"
+r = ":config-reload"
+R = "replace_selections_with_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+y = "yank_joined_to_clipboard"
+Y = "yank_main_selection_to_clipboard"
+
+# File ------------------------------------------------------------------------
+[keys.normal."space".f]
+s = ":write"
+S = ":write-quit"
+f = "file_picker_in_current_directory"
+F = "file_picker"
+
+# LSP
+[keys.normal."space".l]
+a = "code_action"
+d = "goto_definition"
+t = "goto_type_definition"
+r = "goto_reference"
+R = "rename_symbol"
+i = "goto_implementation"
+h = "hover"
+s = "symbol_picker"
+S = "workspace_symbol_picker"
+p = "goto_prev_diag"
+n = "goto_next_diag"
+f = "goto_first_diag"
+l = "goto_last_diag"
+
+# Move (TS)
+[keys.normal."space".m]
+f = "goto_next_function"
+F = "goto_prev_function"
+c = "goto_next_class"
+C = "goto_prev_class"
+a = "goto_next_parameter"
+A = "goto_prev_parameter"
+x = "goto_next_comment"
+X = "goto_prev_comment"
+p = "goto_next_paragraph"
+P = "goto_prev_paragraph"
+s = "add_newline_below"
+S = "add_newline_above"
+
+# Window ----------------------------------------------------------------------
+[keys.normal."space".w]
+w = "no_op"
+C-w = "no_op"
+q = "no_op"
+C-q = "no_op"
+o = "no_op"
+C-o = "no_op"
+n = "rotate_view"
+S = "hsplit_new"
+V = "vsplit_new"
+d = "wclose"
+D = "wonly"
+
+
+# Insert Mode -----------------------------------------------------------------
+[keys.insert]
+j = {  k = "normal_mode" }
