@@ -445,3 +445,36 @@ la
 rmdir Scripts/
 la
 git status
+git add .
+git commit -m 
+git commit
+git config --global user.email "6asacchi@gmail.com"
+git commit
+git config --global user.name "gasacchi"
+git commit
+git push
+la
+cd
+cd .config/
+la
+e --health
+lla
+cd zellij/
+la
+cd ..
+la
+rmdir README.org/
+touch README.org
+e  README.org
+g
+la
+e .gitignore
+g
+la
+cd nushell/
+la
+cd ..
+la
+e .gitignore
+g
+e .gitignore
