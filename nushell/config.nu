@@ -11,6 +11,7 @@ alias z = zellij
 alias rm = rm -v
 alias mv = mv -v
 alias cp = cp -v
+alias ln = ln -v
 
 ## CLI Tools Aliases
 alias cat = bat
