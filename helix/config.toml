@@ -104,10 +104,11 @@ Y = "yank_main_selection_to_clipboard"
 
 # File ------------------------------------------------------------------------
 [keys.normal."space".f]
-s = ":write"
-S = ":write-quit"
 f = "file_picker_in_current_directory"
 F = "file_picker"
+n = ":new"
+s = ":write"
+S = ":write-quit"
 
 # LSP
 [keys.normal."space".l]
@@ -124,6 +125,18 @@ p = "goto_prev_diag"
 n = "goto_next_diag"
 f = "goto_first_diag"
 l = "goto_last_diag"
+
+# Open 
+[keys.normal."space".o]
+b = ":open ~/.config/broot/conf.toml"
+c = ":config-open"
+e = ":open ~/.config/nushell/env.nu"
+g = ":open ~/.config/gitui/key_bindings.ron"
+k = ":open ~/.config/kitty/kitty.conf"
+n = ":open ~/.config/nushell/config.nu"
+s = ":open ~/.config/starship/starship.toml"
+t = ":open "
+z = ":open ~/.config/zellij/config.yaml"
 
 # Window ----------------------------------------------------------------------
 [keys.normal."space".w]
