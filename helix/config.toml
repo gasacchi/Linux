@@ -119,6 +119,7 @@ F = "file_picker"
 n = ":new"
 s = ":write"
 S = ":write-quit"
+r = ":reload"
 
 # LSP
 [keys.normal."space".l]
