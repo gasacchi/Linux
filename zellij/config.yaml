@@ -69,6 +69,33 @@ keybinds:
     - action: [Quit,]
       key: [Char: 'q']
     
+    # External commands
+    # launch gitui
+    - action: [Run:  {cmd: "gitui", direction: Right},
+               TogglePaneEmbedOrFloating,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Up,
+               Resize: Up,
+               Resize: Up,
+               Resize: Down,
+               Resize: Down,
+               Resize: Down,
+               SwitchToMode: Normal,]
+      key: [Char: 'g']
+    
     # Pane
     - action: [MoveFocusOrTab: Right,SwitchToMode: Normal,]
       key: [Char: "\t"]
@@ -88,6 +115,10 @@ keybinds:
       key: [Char: 'd',]
     - action: [ToggleFocusFullscreen,SwitchToMode: Normal,]
       key: [Char: 'f',]
+    - action: [ToggleFloatingPanes,SwitchToMode: Normal]
+      key: [Char: 'w',]
+    - action: [TogglePaneEmbedOrFloating,SwitchToMode: Normal]
+      key: [Char: 'W',]
     
     # Move Pane
     - action: [MovePane: Left]
