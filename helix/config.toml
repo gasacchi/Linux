@@ -166,4 +166,9 @@ D = "wonly"
 
 # Insert Mode -----------------------------------------------------------------
 [keys.insert]
+"C-c" = "normal_mode"
 j = {  k = "normal_mode" }
+
+# Select Mode -----------------------------------------------------------------
+[keys.select]
+"C-c" = "normal_mode"
