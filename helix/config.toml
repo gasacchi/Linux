@@ -44,6 +44,15 @@ newline = "⏎"
 "C-w" = "no_op"
 "["   = "no_op"
 "]"   = "no_op"
+"C-c" = "normal_mode"
+
+[keys.normal.g]
+d = "no_op"
+y = "no_op"
+r = "no_op"
+i = "no_op"
+n = "no_op"
+p = "no_op"
 
 # Match and Move
 [keys.normal.m]
@@ -80,7 +89,7 @@ S   = "no_op"
 a   = "no_op"
 r   = "no_op"
 R   = "no_op"
-"/" = "no_op"
+"/" = "toggle_comments"
 "?" = "no_op"
 
 # Buffer ----------------------------------------------------------------------
@@ -94,12 +103,14 @@ x = ":buffer-close-all"
 
 # Editor ----------------------------------------------------------------------
 [keys.normal."space".e]
-r = ":config-reload"
-R = "replace_selections_with_clipboard"
-p = "paste_clipboard_after"
-P = "paste_clipboard_before"
-y = "yank_joined_to_clipboard"
-Y = "yank_main_selection_to_clipboard"
+"." = ":show-directory"
+l   = ":log-open"
+r   = ":config-reload"
+R   = "replace_selections_with_clipboard"
+p   = "paste_clipboard_after"
+P   = "paste_clipboard_before"
+y   = "yank_joined_to_clipboard"
+Y   = "yank_main_selection_to_clipboard"
 
 # File ------------------------------------------------------------------------
 [keys.normal."space".f]
@@ -111,19 +122,20 @@ S = ":write-quit"
 
 # LSP
 [keys.normal."space".l]
-a = "code_action"
-d = "goto_definition"
-t = "goto_type_definition"
-r = "goto_reference"
-R = "rename_symbol"
-i = "goto_implementation"
-h = "hover"
-s = "symbol_picker"
-S = "workspace_symbol_picker"
-p = "goto_prev_diag"
-n = "goto_next_diag"
-f = "goto_first_diag"
-l = "goto_last_diag"
+"." = ":format"
+a   = "code_action"
+d   = "goto_definition"
+t   = "goto_type_definition"
+r   = "goto_reference"
+R   = "rename_symbol"
+i   = "goto_implementation"
+h   = "hover"
+s   = "symbol_picker"
+S   = "workspace_symbol_picker"
+p   = "goto_prev_diag"
+n   = "goto_next_diag"
+f   = "goto_first_diag"
+l   = "goto_last_diag"
 
 # Open 
 [keys.normal."space".o]
