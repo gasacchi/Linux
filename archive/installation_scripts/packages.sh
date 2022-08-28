@@ -68,6 +68,7 @@ pacman -S \
   filezilla \
   figma-linux-bin \
   pnpm-bin \
+  lua-language-server \ 
 
 ### Hardware Development
   kicad \
@@ -85,7 +86,11 @@ pacman -S \
   imagewriter \
 
 ### Terminal Utility
-  bandwhich \ # see bandwith
+  xplr \ # tui file manager
+  taskwarrior-tui \ # manage task and todo
+  pastel \ # manipulate color
+  onefetch \ # git repo summary
+  gping \ # ping with graph
   bat \ # cat alt
   bottom \ # process monitor
   broot \ # tree with cd
