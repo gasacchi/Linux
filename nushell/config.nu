@@ -19,7 +19,7 @@ alias cat = bat
 alias g = gitui
 
 # source scripts
-source ~/.config/nushell/scripts/broot.nu
+source ~/.config/nushell/functions.nu
 
 module completions {
   # Custom completions for external commands (those outside of Nushell)
