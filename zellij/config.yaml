@@ -55,7 +55,7 @@ keybinds:
     - action: [SwitchToMode: Resize,]
       key: [Char: 'r']
     - action: [SwitchToMode: Scroll,]
-      key: [Char: 'S']
+      key: [Char: 'm']
     - action: [SwitchToMode: EnterSearch,SearchInput: [0],]
       key: [Char: '.']
     - action: [SwitchToMode: Session,]
@@ -120,7 +120,7 @@ keybinds:
                Resize: Down,
                Resize: Down,
                SwitchToMode: Normal,]
-      key: [Char: 'm']
+      key: [Char: 'b']
     
     # Pane
     - action: [MoveFocusOrTab: Right,SwitchToMode: Normal,]
