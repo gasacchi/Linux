@@ -95,6 +95,32 @@ keybinds:
                Resize: Down,
                SwitchToMode: Normal,]
       key: [Char: 'g']
+
+    # launch bottom
+    - action: [Run:  {cmd: "btm", direction: Right},
+               TogglePaneEmbedOrFloating,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Up,
+               Resize: Up,
+               Resize: Up,
+               Resize: Down,
+               Resize: Down,
+               Resize: Down,
+               SwitchToMode: Normal,]
+      key: [Char: 'm']
     
     # Pane
     - action: [MoveFocusOrTab: Right,SwitchToMode: Normal,]
