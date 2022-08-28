@@ -1,6 +1,6 @@
+# Various function wrapper for some programs
 
-# Broot scripts
-
+# Broot
 def-env j [
   --args (-a): string
 ] {
@@ -13,5 +13,13 @@ def-env j [
   let-env cmd = ((open $cmd_file) | str trim)
   ^rm $cmd_file
   cd ($env.cmd | str replace "cd" "" | str trim)
+}
+
+# gping (ping with graph)
+def ping [
+    host: string
+    --color (-c): string = "#f6c177"
+    ] {
+  ^gping $host --color $color
 }
 
