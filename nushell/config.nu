@@ -17,6 +17,7 @@ alias du = dust
 ## CLI Tools Aliases
 alias cat = bat
 alias g = gitui
+alias taskwarrior-tui = taskwarrior-tui --config ~/.config/taskwarrior
 
 # source scripts
 source ~/.config/nushell/functions.nu

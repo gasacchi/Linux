@@ -121,6 +121,32 @@ keybinds:
                Resize: Down,
                SwitchToMode: Normal,]
       key: [Char: 'b']
+
+    # launch takswarrior
+    - action: [Run:  {cmd: "taskwarrior-tui", direction: Right},
+               TogglePaneEmbedOrFloating,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Up,
+               Resize: Up,
+               Resize: Up,
+               Resize: Down,
+               Resize: Down,
+               Resize: Down,
+               SwitchToMode: Normal,]
+      key: [Char: 'c']
     
     # Pane
     - action: [MoveFocusOrTab: Right,SwitchToMode: Normal,]
