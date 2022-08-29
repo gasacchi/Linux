@@ -43,7 +43,7 @@ pacman -S \
   xorg \
   gnome \ 
   gnome-tweaks \
-  chrome-gnome-shell \
+  gnome-browser-connector \
   
 ### Sound
   pulseaudio \
