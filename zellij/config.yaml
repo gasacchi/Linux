@@ -148,7 +148,7 @@ keybinds:
                SwitchToMode: Normal,]
       key: [Char: ' ']
 
-    # launch takswarrior
+    # launch todo markdown list
     - action: [Run:  {cmd: "helix", args: ["~/Dev/github/Stuff/TODO.md"], direction: Right},
                TogglePaneEmbedOrFloating,
                Resize: Left,
