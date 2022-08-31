@@ -1,7 +1,77 @@
+# Opening code with enter
 [[verbs]]
-invocation = "edit"
-key = "F2"
-shortcut = "e"
-apply_to = "file"
-external = "helix {file}"
-leave_broot = true
+name = "open-code"
+key = "enter"
+extensions = [
+  "rs", 
+  "js",
+  "ron",
+  "json",
+  "toml",
+  "yaml",
+  "ts",
+  "res",
+  "resi",
+  "md"
+]
+execution = "$EDITOR {file}"
+working_dir = "{root}"
+leave_broot = false
+
+# Open and leave broot
+[[verbs]]
+name = "open-leave"
+key = "alt-enter"
+extensions = [
+  "rs", 
+  "js",
+  "ron",
+  "json",
+  "toml",
+  "yaml",
+  "ts",
+  "res",
+  "resi",
+  "md"
+]
+execution = "$EDITOR {file}"
+
+# Move or open panel to the left
+[[verbs]]
+name = "move-open-left"
+key = "ctrl-h"
+internal = ":panel_left"
+
+# Move or open panel to the right
+[[verbs]]
+name = "move-open-right"
+key = "ctrl-l"
+internal = ":panel_right"
+
+[[verbs]]
+invocation = "top"
+key = "ctrl-f"
+internal = ":select_first"
+
+[[verbs]]
+invocation = "bottom"
+key = "ctrl-b"
+internal = ":select_last"
+
+[[verbs]]
+key = "alt-b"
+internal = ":input_go_word_left"
+
+[[verbs]]
+key = "alt-f"
+internal = ":input_go_word_right"
+
+[[verbs]]
+key = "alt-l"
+internal = ":input_del_word_left"
+
+[[verbs]]
+key = "alt-r"
+internal = ":input_del_word_right"
+
+
