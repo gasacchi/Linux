@@ -1,65 +1,86 @@
 [skin]
-default = "rgb(25,23,36) None / rgb(31,29,46) None" # done
-tree = "rgb(82, 79, 103) None / rgb(82, 79, 103) None" # done
-file = "rgb(224,222,244) None / rgb(224,222,244) None" # done
-directory = "rgb(235,111,146) None Bold / rgb(235,111,146) None Bold" # done
-exe = "rgb(156,207,216) None Bold" # done
-link = "rgb(196,167,231) None" # done
+default = "rgb(25,23,36) None / rgb(31,29,46) None"
+tree = "rgb(82, 79, 103) None / rgb(82, 79, 103) None"
+file = "rgb(224,222,244) None / rgb(224,222,244) None"
+directory = "rgb(235,111,146) None Bold / rgb(235,111,146) None Bold"
+exe = "rgb(156,207,216) None Bold"
+link = "rgb(196,167,231) None"
 pruning = "Red None Italic" # wtf
-perm__ = "rgb(144,140,170) None" # done
-perm_r = "rgb(246,193,119) None" # done
-perm_w = "rgb(49,116,143) None" # done
-perm_x = "rgb(156,207,216) None" # done
-owner = "rgb(144,140,170) None" # done
-group = "rgb(110,106,134) None" # done
+perm__ = "rgb(144,140,170) None"
+perm_r = "rgb(246,193,119) None"
+perm_w = "rgb(49,116,143) None"
+perm_x = "rgb(156,207,216) None"
+owner = "rgb(144,140,170) None"
+group = "rgb(110,106,134) None"
 count = "Red Blue"
 dates = "ansi(66) None"
 sparse = "ansi(214) None"
 content_extract = "ansi(29) None"
 content_match = "ansi(34) None"
-git_branch = "rgb(235,188,186) None" # done
-git_insertions = "rgb(156,207,216) None" # done
-git_deletions = "rgb(235,111,146) None" # done
-git_status_current = "rgb(196,167,231) None" # done
-git_status_modified = "rgb(235,188,186) None" #done
-git_status_new = "rgb(156,207,216) None Bold" # done
-git_status_ignored = "rgb(110,106,134) None" # done
-git_status_conflicted = "rgb(246,193,119) None" # done
-git_status_other = "rgb(49,116,143) None" # done
-selected_line = "None rgb(64,61,82) / None rgb(64,61,82)" # done
-char_match = "rgb(246,193,119) None" # done
-file_error = "rgb(235,111,146) None" # done
-flag_label = "rgb(144,140,170) None" # done
+selected_line = "None rgb(64,61,82) / None rgb(64,61,82)"
+char_match = "rgb(246,193,119) None"
+file_error = "rgb(235,111,146) None"
+flag_label = "rgb(144,140,170) None"
 flag_value = "rgb(235,111,146) None Bold"
-input = "rgb(224,222,244) None / gray(15) gray(2)" # half done
-status_error = "rgb(235,111,146) rgb(31,29,46)" # done
-status_job = "rgb(25, 23, 36) rgb(246, 193, 119) Italic" # done
-status_normal = "rgb(224, 222, 244) rgb(31,29,46) / rgb(224, 222, 244) rgb(31,29,46)" # done
-status_italic = "rgb(246, 193, 119) rgb(31, 29, 46) / gray(2) gray(2)" # half done
-status_bold = "rgb(246, 193, 119) rgb(31, 29, 46) Bold / gray(2) gray(2)" # half done
-#status_code = "ansi(229) rgb(31, 29, 46) / gray(2) gray(2)" # half done
-status_code = "ansi(229) Red / gray(2) gray(2)" # half done
-status_ellipsis = "rgb(224, 222, 244) rgb(31, 29, 46) / gray(2) gray(2)" # half done
+
+# Git Color
+git_branch = "rgb(235,188,186) None"
+git_insertions = "rgb(156,207,216) None"
+git_deletions = "rgb(235,111,146) None"
+git_status_current = "rgb(196,167,231) None"
+git_status_modified = "rgb(235,188,186) None"
+git_status_new = "rgb(156,207,216) None Bold"
+git_status_ignored = "rgb(110,106,134) None"
+git_status_conflicted = "rgb(246,193,119) None"
+git_status_other = "rgb(49,116,143) None"
+
+
+# Input Color
+input = "rgb(224,222,244) None / gray(15) gray(2)"
+
+# Status Line Color
+status_error = "rgb(235,111,146) rgb(31,29,46)"
+status_job = "rgb(25, 23, 36) rgb(246, 193, 119) Italic"
+status_normal = "rgb(224, 222, 244) rgb(31,29,46) / rgb(224, 222, 244) rgb(31,29,46)"
+status_italic = "rgb(246, 193, 119) rgb(31, 29, 46) / gray(2) gray(2)"
+status_bold = "rgb(246, 193, 119) rgb(31, 29, 46) Bold / gray(2) gray(2)"
+#status_code = "ansi(229) rgb(31, 29, 46) / gray(2) gray(2)"
+status_code = "ansi(229) Red / gray(2) gray(2)"
+status_ellipsis = "rgb(224, 222, 244) rgb(31, 29, 46) / gray(2) gray(2)"
+
+# Purpose Color
 purpose_normal = "gray(20) gray(2)"
 purpose_italic = "ansi(178) gray(2)"
 purpose_bold = "ansi(178) gray(2) Bold"
 purpose_ellipsis = "gray(20) gray(2)"
-scrollbar_track = "gray(7) None / gray(4) None"
-scrollbar_thumb = "gray(22) None / gray(14) None"
-help_paragraph = "gray(20) None"
-help_bold = "ansi(208) None Bold"
-help_italic = "ansi(166) None"
-help_code = "gray(21) gray(3)"
-help_headers = "ansi(208) None"
-help_table_border = "ansi(239) None"
-preview_title = "gray(23) None / gray(21) None"
-preview = "gray(20) gray(1) / gray(18) gray(2)"
-preview_line_number = "gray(12) gray(3)"
-preview_match = "None ansi(29)"
+
+# Scroll Bar Color
+scrollbar_track = "rgb(31, 29, 46) None / rgb(25, 23, 36) None"
+scrollbar_thumb = "rgb(246, 193, 119) None / rgb(196, 167, 231) None"
+
+# Help Page Color
+help_paragraph = "rgb(224, 222, 244) None"
+help_bold = "rgb(246, 193, 119) None Bold"
+help_italic = "rgb(246, 193, 119) None"
+help_code = "rgb(235, 111, 146) None"
+help_headers = "rgb(235, 188, 186) None"
+help_table_border = "rgb(82, 79, 103) None"
+
+# Preview Color
+preview_title = "rgb(235, 111, 146) None / rgb(144, 140, 170) None"
+preview = "rgb(224, 222, 244) rgb(31, 29, 46) / rgb(144, 140, 170) rgb(25, 23, 36)"
+preview_line_number = "rgb(196, 167, 231) rgb(31, 29, 46)"
+preview_match = "rgb(25, 23, 36) rgb(246, 193, 119)"
+
+# Hex Color
 hex_null = "gray(11) None"
 hex_ascii_graphic = "gray(18) None"
 hex_ascii_whitespace = "ansi(143) None"
 hex_ascii_other = "ansi(215) None"
 hex_non_ascii = "ansi(167) None"
-staging_area_title = "gray(22) None / gray(20) None"
+
+# Staging area Color
+staging_area_title = "rgb(235, 111, 146) None / rgb(235, 188, 186) None"
+
+# Mode Color
 mode_command_mark = "gray(5) ansi(204) Bold"
