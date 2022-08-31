@@ -43,9 +43,9 @@ keybinds:
   normal:
     - action: [SwitchToMode: Tmux,]
       key: [Ctrl: 't']
-  locked:
-    - action: [SwitchToMode: Normal,]
-      key: [Ctrl: 'l']
+  # locked:
+    # - action: [SwitchToMode: Normal,]
+      # key: [Ctrl: 'l']
   tmux:
     # Switch Mode
     - action: [SwitchToMode: Normal,]
