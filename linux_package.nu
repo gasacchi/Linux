@@ -40,7 +40,6 @@ let hardware_development = [
 
 let daily = [
   {name: "brave-beta-bin", description: "Brave browser"}
-  {name: "imagewriter", description: "Image ISO writer"}
   {name: "mpv", description: "Video Player"}
   {name: "virtualbox", description: "Virtual Machine"}
 ]
