@@ -18,6 +18,12 @@ alias du = dust
 alias cat = bat
 alias g = gitui
 
+## Git alias
+alias gp = git push
+alias gc = git commit
+alias gs = git status
+alias ga = git add
+
 # source scripts
 source ~/.config/nushell/functions.nu
 
