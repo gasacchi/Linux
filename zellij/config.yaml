@@ -50,8 +50,8 @@ keybinds:
     # Switch Mode
     - action: [SwitchToMode: Normal,]
       key: [Ctrl: 't', Ctrl: 'c', Esc,]
-    - action: [SwitchToMode: Locked,]
-      key: [Ctrl: 'l']
+    # - action: [SwitchToMode: Locked,]
+    #   key: [Ctrl: 'l']
     - action: [SwitchToMode: Resize,]
       key: [Char: 'r']
     - action: [SwitchToMode: Scroll,]
