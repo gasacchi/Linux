@@ -23,3 +23,22 @@ def ping [
   ^gping $host --color $color
 }
 
+# Gasacchi System 
+
+# Control Gsc System
+def "gsc sys" [
+  cmd: string # The name of commands: update,sync
+] {
+  if $cmd == "update" {
+    ^yay -Syyu
+  } else if $cmd == "sync" {
+    ^yay -Syy
+  } else if $cmd == "reboot" {
+    ^reboot
+  } else if $cmd == "shutdown" {
+    ^shutdown now
+  } else {
+    help "gsc sys"
+  }
+}
+
