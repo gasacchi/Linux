@@ -11,7 +11,7 @@ mouse = true
 line-number = "relative"
 rulers = [80,]
 shell = ["nu", "-c"]
-gutters = ["diagnostics",]
+gutters = ["diagnostics","line-numbers"]
 idle-timeout = 0
 true-color = true
 
