@@ -149,7 +149,7 @@ keybinds:
       key: [Char: ' ']
 
     # launch todo markdown list
-    - action: [Run:  {cmd: "helix", args: ["~/Dev/github/Stuff/TODO.md"], direction: Right},
+    - action: [Run:  {cmd: "helix", args: ["~/Dev/github/Stuff/todos/TODO.md"], direction: Right},
                TogglePaneEmbedOrFloating,
                Resize: Left,
                Resize: Left,
