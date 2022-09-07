@@ -89,6 +89,19 @@ let desktop = [
   {name: "alsa-utils", description: "Alsa extra utils"}
 ]
 
+let tauri_requirement = [
+  {name: "webkit2gtk", description: ""}
+  {name: "base-devel", description: ""}
+  {name: "curl", description: ""}
+  {name: "wget", description: ""}
+  {name: "openssl", description: ""}
+  {name: "appmenu-gtk-module", description: ""}
+  {name: "gtk3", description: ""}
+  {name: "libappindicator-gtk3", description: ""}
+  {name: "librsvg", description: ""}
+  {name: "libvips", description: ""}
+]
+
 let pnpm_global = [
   {name: "@prisma/language-server", description: "Prisma language server"}
   {name: "@taplo/cli", description: "Toml linting"}
@@ -106,6 +119,7 @@ let packages = (add_category $base "base"
                 | append (add_category $cli "cli")
                 | append (add_category $fonts "fonts")
                 | append (add_category $desktop "desktop")
+                | append (add_category $tauri_requirement "tauri")
                 | append (add_category $pnpm_global "pnpm")
                 )
 
