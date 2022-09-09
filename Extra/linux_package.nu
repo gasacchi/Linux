@@ -84,6 +84,7 @@ let desktop = [
   {name: "gnome", description: "Gnome Desktop Environment"}
   {name: "gnome-tweaks", description: "Gnome tweak tools"}
   {name: "gnome-browser-connector", description: "Gnome browser extensions plugin"}
+  {name: "catppuccin-gtk-theme-mocha", description: "Catppuccin Mocha GTK Theme"}
   {name: "pulseaudio", description: "Audio tools"}
   {name: "puseaudio-alsa", description: "Alsa pulse audio integrations"}
   {name: "alsa-utils", description: "Alsa extra utils"}
