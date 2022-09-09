@@ -21,7 +21,7 @@ let base = [
 let development = [
   {name: "git", description: "git version control"}
   {name: "upwork", description: "Freelance tools"}
-  {name: "kitty", description: "Terminal Emulator"}
+  {name: "contour-git", description: "Terminal Emulator"}
   {name: "nushell" , description: "New kind of shell written in rust"}
   {name: "starship", description: "Pretty prompt"}
   {name: "nodejs", description: "Nodejs js on backend"}
