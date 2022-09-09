@@ -15,7 +15,7 @@ alias ln = ln -v
 alias du = dust
 
 ## CLI Tools Aliases
-alias cat = bat
+alias cat = bat --theme="Catppuccin-mocha"
 alias g = gitui
 
 ## Git alias
