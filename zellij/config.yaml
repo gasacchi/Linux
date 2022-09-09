@@ -148,7 +148,7 @@ keybinds:
                SwitchToMode: Normal,]
       key: [Char: ' ']
 
-    # launch todo markdown list
+    # launch global todo markdown list
     - action: [Run:  {cmd: "helix", args: ["~/Dev/github/Stuff/todos/TODO.md"], direction: Right},
                TogglePaneEmbedOrFloating,
                Resize: Left,
@@ -172,7 +172,34 @@ keybinds:
                Resize: Down,
                Resize: Down,
                SwitchToMode: Normal,]
+      key: [Char: 'C']
+
+    # launch per-project todo markdown list
+    - action: [Run:  {cmd: "helix", args: ["./TODO.md"], direction: Right},
+               TogglePaneEmbedOrFloating,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Left,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Right,
+               Resize: Up,
+               Resize: Up,
+               Resize: Up,
+               Resize: Down,
+               Resize: Down,
+               Resize: Down,
+               SwitchToMode: Normal,]
       key: [Char: 'c']
+    
     
     # Pane
     - action: [MoveFocusOrTab: Right,SwitchToMode: Normal,]
