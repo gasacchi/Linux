@@ -25,9 +25,13 @@ def ping [
 
 # Gasacchi System 
 
+def commands [] {
+  ["update", "sync", "reboot", "shutdown"]
+}
+
 # Control Gsc System
 def "gsc sys" [
-  cmd: string # The name of commands: update,sync
+  cmd: string@commands # The name of commands: update,sync,reboot,shutdown
 ] {
   if $cmd == "update" {
     ^yay -Syyu
