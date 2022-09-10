@@ -21,8 +21,8 @@ count = "rgb(166, 173, 200) None"
 # br -d
 dates = "rgb(166, 173, 200) None"
 
-# TODO
-sparse = "Red None"
+# TODO: still don't know where the ui is?
+sparse = "Blue None"
 content_extract = "Red None"
 content_match = "Blue None"
 
@@ -56,7 +56,7 @@ status_bold = "rgb(250, 179, 135) rgb(49, 50, 68) Bold / rgb(166, 173, 200) rgb(
 status_code = "Red rgb(49, 50, 68) / Red rgb(24, 24, 37)" # still don't know
 status_ellipsis = "rgb(186, 194, 222) rgb(49, 50, 68) / rgb(166, 173, 200) rgb(24, 24, 37)"
 
-# TODO
+# TODO: Still don't know where the ui is?
 purpose_normal = "gray(20) gray(2)"
 purpose_italic = "ansi(178) gray(2)"
 purpose_bold = "ansi(178) gray(2) Bold"
@@ -80,7 +80,7 @@ preview = "Red rgb(17, 17, 27) / Red rgb(24, 24, 37)"
 preview_line_number = "rgb(69, 71, 90) rgb(24, 24, 37)"
 preview_match = "rgb(250, 179, 135) rgb(88, 91, 112)"
 
-# Hex TODO
+# Hex TODO: Use for hex preview but still can't inspect it
 hex_null = "gray(11) None"
 hex_ascii_graphic = "gray(18) None"
 hex_ascii_whitespace = "ansi(143) None"
