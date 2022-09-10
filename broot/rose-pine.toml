@@ -1,3 +1,4 @@
+# Rosepine Broot Color theme
 [skin]
 default = "rgb(25,23,36) None / rgb(31,29,46) None"
 tree = "rgb(82, 79, 103) None / rgb(82, 79, 103) None"
