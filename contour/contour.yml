@@ -441,7 +441,7 @@ color_schemes:
             # Image opacity to be applied to make the image not look to intense
             # and not get too distracted by the background image.
             # Default: 0.5
-            opacity: 0.5
+            opacity: 0.4
 
             # Optionally blurs background image to make it less distracting
             # and keep the focus on the actual terminal contents.
