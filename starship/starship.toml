@@ -7,10 +7,10 @@
 add_newline = false
 
 [character]
-format = "$symbol [ ](fg:#ebbcba)"
-success_symbol = "[](bold fg:#31748f)" 
-error_symbol = "[](bold fg:#eb6f92)"
-vicmd_symbol = "[  ](bold fg:#9ccfd8)"
+format = "$symbol [ ](fg:#a6e3a1)"
+success_symbol = "[](bold fg:#a6e3a1)" 
+error_symbol = "[](bold fg:#f38ba8)"
+vicmd_symbol = "[  ](bold fg:#a6e3a1)"
 
 # Battery Module
 [battery]
@@ -20,37 +20,37 @@ discharging_symbol = ""
 
 [[battery.display]] 
 threshold = 10
-style = "bold #eb6f92"
+style = "bold #f38ba8"
 
 [[battery.display]]
 threshold = 20
-style = "bold #f6c177"
+style = "bold #fab387"
 
 # Directory Module
 [directory]
-style = "bold #eb6f92"
+style = "bold #89b4fa"
 truncation_length = 3
 truncation_symbol = "_/"
 read_only = "  "
-read_only_style = "#9ccfd8"
+read_only_style = "#45475a"
 
 # Git Module
 [git_branch]
-style = "bold #f6c177"
+style = "bold #fab387"
 
 [git_commit]
-style = "bold #f6c177"
+style = "bold #89dceb"
 
 [git_status]
-style = "bold #c4a7e7"
+style = "bold #cba6f7"
 
 [git_metrics]
 disabled = false
-added_style = "bold #9ccfd8"
-deleted_style = "bold #eb6f92"
+added_style = "bold #a6e3a1"
+deleted_style = "bold #f38ba8"
 
 [git_state]
-style = "bold #ebbcba"
+style = "bold #cba6f7"
 
 [package]
 format = "via [ $version](208 bold) "
