@@ -14,9 +14,9 @@ show_selection_mark = true
 icon_theme = "vscode"
 
 # Theme
-syntax_theme = "MochaDark"
+syntax_theme = "EightiesDark"
 
 imports = [
   "verbs.toml",
-  {luma = ["dark", "unknown"], file = "rose-pine.toml"}
+  {luma = ["dark", "unknown"], file = "catppuccin_mocha.toml"}
 ]

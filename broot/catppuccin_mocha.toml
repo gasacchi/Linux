@@ -1,0 +1,94 @@
+# Catppuccin Mocha Broot Theme
+# Format: name = "Fg Bg Attr / Unactive Fg Bg Attr"
+[skin]
+# Background
+default = "rgb(205, 214, 244) none / rgb(166, 173, 200) none"
+tree = "rgb(88, 91, 112) None / rgb(49, 50, 68) None"
+file = "rgb(186, 194, 222) None / rgb(127, 132, 156) None"
+directory = "rgb(137, 180, 250) None Bold / rgb(108, 112, 134) None bold"
+exe = "rgb(243, 139, 168) None"
+link = "rgb(137, 220, 235) None"
+pruning = "rgb(127, 132, 156) None Italic"
+input = "rgb(205, 214, 244) None / rgb(127, 132, 156) None"
+# Selection Match
+selected_line = "None rgb(88, 91, 112) / None rgb(108, 112, 134)"
+char_match = "rgb(250, 179, 135) None"
+file_error = "rgb(243, 139, 168) None"
+flag_label = "rgb(127, 132, 156) None"
+flag_value = "rgb(166, 227, 161) None Bold"
+# br --sort-by-count
+count = "rgb(166, 173, 200) None"
+# br -d
+dates = "rgb(166, 173, 200) None"
+
+# TODO
+sparse = "Red None"
+content_extract = "Red None"
+content_match = "Blue None"
+
+# File Permission
+# br -p
+perm__ = "rgb(127, 132, 156) None"
+perm_r = "rgb(250, 179, 135) None"
+perm_w = "rgb(166, 227, 161) None"
+perm_x = "rgb(137, 220, 235) None"
+owner = "rgb(245, 224, 220) None"
+group = "rgb(235, 160, 172) None"
+
+# Git Color
+# br -g
+git_branch = "rgb(250, 179, 135) None"
+git_insertions = "rgb(166, 227, 161) None"
+git_deletions = "rgb(243, 139, 168) None"
+git_status_current = "rgb(205, 214, 244) None"
+git_status_modified = "rgb(166, 227, 161) None"
+git_status_new = "rgb(116, 199, 236) None Bold"
+git_status_ignored = "rgb(127, 132, 156) None"
+git_status_conflicted = "rgb(250, 179, 135) None"
+git_status_other = "rgb(137, 180, 250) None"
+
+# Status line
+status_error = "rgb(243, 139, 168) rgb(49, 50, 68) Bold"
+status_job = "rgb(30, 30, 46) rgb(166, 227, 161)"
+status_normal = "rgb(127, 132, 156) rgb(49, 50, 68) / rgb(127, 132, 156) rgb(24, 24, 37)"
+status_italic = "rgb(166, 227, 161) rgb(49, 50, 68) Italic / rgb(166, 173, 200) rgb(24, 24, 37) Italic"
+status_bold = "rgb(250, 179, 135) rgb(49, 50, 68) Bold / rgb(166, 173, 200) rgb(24, 24, 37) Bold"
+status_code = "Red rgb(49, 50, 68) / Red rgb(24, 24, 37)" # still don't know
+status_ellipsis = "rgb(186, 194, 222) rgb(49, 50, 68) / rgb(166, 173, 200) rgb(24, 24, 37)"
+
+# TODO
+purpose_normal = "gray(20) gray(2)"
+purpose_italic = "ansi(178) gray(2)"
+purpose_bold = "ansi(178) gray(2) Bold"
+purpose_ellipsis = "gray(20) gray(2)"
+
+# Scrollbar
+scrollbar_track = "rgb(69, 71, 90) None / rgb(49, 50, 68) None"
+scrollbar_thumb = "rgb(166, 227, 161) None / rgb(127, 132, 156) None"
+
+# Help page
+help_paragraph = "rgb(205, 214, 244) None"
+help_bold = "rgb(250, 179, 135) None Bold"
+help_italic = "rgb(137, 180, 250) None"
+help_code = "rgb(243, 139, 168) None"
+help_headers = "rgb(166, 227, 161) None"
+help_table_border = "rgb(88, 91, 112) None"
+
+# Preview Pane
+preview_title = "rgb(166, 227, 161) None / rgb(127, 132, 156) None"
+preview = "Red rgb(17, 17, 27) / Red rgb(24, 24, 37)"
+preview_line_number = "rgb(69, 71, 90) rgb(24, 24, 37)"
+preview_match = "rgb(250, 179, 135) rgb(88, 91, 112)"
+
+# Hex TODO
+hex_null = "gray(11) None"
+hex_ascii_graphic = "gray(18) None"
+hex_ascii_whitespace = "ansi(143) None"
+hex_ascii_other = "ansi(215) None"
+hex_non_ascii = "ansi(167) None"
+
+# Staging Pane
+staging_area_title = "rgb(166, 227, 161) None / rgb(127, 132, 156) None"
+
+# Mode Line Mark
+mode_command_mark = "rgb(30, 30, 46) rgb(166, 227, 161) Bold"
