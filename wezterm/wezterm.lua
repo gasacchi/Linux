@@ -17,7 +17,7 @@ return {
   window_decorations = "NONE",
   window_background_image = "/home/gasacchi/Pictures/HayasakaAi.gif",
   window_background_image_hsb = {
-    brightness = 0.9
+    brightness = 1
   },
   window_background_opacity = 1.0,
 }
