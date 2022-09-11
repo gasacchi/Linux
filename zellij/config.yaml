@@ -148,7 +148,7 @@ keybinds:
       key: [Char: ' ']
 
     # launch global todo markdown list
-    - action: [Run:  {cmd: "helix", args: ["~/Dev/github/Stuff/todos/TODO.md"], direction: Right},
+    - action: [Run:  {cmd: "broot", args: ["/home/gasacchi/Dev/github/Stuff/todos/"], direction: Right},
                TogglePaneEmbedOrFloating,
                Resize: Left,
                Resize: Left,
@@ -172,7 +172,7 @@ keybinds:
                Resize: Down,
                SwitchToMode: Normal,]
       key: [Char: 'c']
-    
+
     # Pane
     - action: [MoveFocusOrTab: Right,SwitchToMode: Normal,]
       key: [Char: "\t"]
