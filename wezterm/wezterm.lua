@@ -7,14 +7,17 @@ return {
   leader = { key = "t", mods = "CTRL", timeout_miliseconds = 1000},
   keys = keys,
   color_scheme = "Catppuccin Mocha",
+  inactive_pane_hsb = {
+    saturation = 0.9,
+    brightness = 0.3
+  },
   -- Fonts
   font_size = 10,
   font = w.font_with_fallback {
     "JetBrainsMono Nerd Font",
-    "Broot Icons Visual Studio Code"
   },
   -- Ignore missing glyphs
-  warn_about_missing_glyphs = false,
+  -- warn_about_missing_glyphs = false,
   -- Tab bar
   use_fancy_tab_bar = false,
   tab_bar_at_bottom = true,

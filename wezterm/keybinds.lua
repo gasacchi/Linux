@@ -123,4 +123,39 @@ return {
     mods = "LEADER|SHIFT",
     action = w.action.ShowDebugOverlay
   },
+  {
+    key = "g",
+    mods = "LEADER",
+    action = w.action.SpawnCommandInNewTab {
+      -- args = { "gitui" },
+      args = { "nu", "/home/gasacchi/Dev/github/Linux/Scripts/wezterm-gitui.nu" },
+    }
+  },
+  {
+    key = "b",
+    mods = "LEADER",
+    action = w.action.SpawnCommandInNewTab {
+      args = { "btm" },
+    }
+  },
+  {
+    key = "Space",
+    mods = "LEADER",
+    action = w.action.SpawnCommandInNewTab {
+      args = { "nyancat" },
+    }
+  },
+  {
+    key = "c",
+    mods = "LEADER",
+    action = w.action.ShowLauncher
+  },
+  {
+    key = "C",
+    mods = "LEADER",
+    action = w.action.SpawnCommandInNewTab {
+      -- args = { "broot", "/home/gasacchi/Dev/github/Stuff/todos" },
+      args = { "nu", "/home/gasacchi/Dev/github/Linux/Scripts/wezterm-broot-todos.nu" },
+    }
+  },
 }
