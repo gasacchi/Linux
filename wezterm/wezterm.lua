@@ -1,6 +1,11 @@
 local w = require "wezterm"
+local keys = require "keybinds"
+
 
 return {
+  disable_default_key_bindings = true,
+  leader = { key = "t", mods = "CTRL", timeout_miliseconds = 1000},
+  keys = keys,
   color_scheme = "Catppuccin Mocha",
   -- Fonts
   font_size = 10,
@@ -8,7 +13,7 @@ return {
     "JetBrainsMono Nerd Font",
     "Broot Icons Visual Studio Code"
   },
- -- Ignore missing glyphs
+  -- Ignore missing glyphs
   warn_about_missing_glyphs = false,
   -- Tab bar
   use_fancy_tab_bar = false,
