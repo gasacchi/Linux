@@ -1,6 +1,6 @@
 (
     selected_tab: Rgb(166, 227, 161),
-    command_fg: Rgb(243, 139, 168),
+    command_fg: Rgb(250, 179, 135),
     selection_bg: Rgb(88, 91, 112),
     cmdbar_extra_lines_bg: Yellow,
     disabled_fg: Rgb(127, 132, 156),
