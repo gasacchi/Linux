@@ -1,10 +1,14 @@
 # Nushell Environment Config File
 
-let pnpm_path = '/home/gasacchi/.local/share/pnpm'
+let pnpm_path = '~/.local/share/pnpm'
+let local_bin = '~/.local/bin'
 
 let-env EDITOR = 'helix'
 let-env PNPM_HOME = $pnpm_path
-let-env PATH = ($env.PATH | append $pnpm_path)
+let-env RUST_PATH = "~/.cargo/bin"
+let-env PATH = ($env.PATH 
+                    | append $pnpm_path 
+                    | append $local_bin)
 
 def create_left_prompt [] {
     let path_segment = if (is-admin) {
