@@ -1,3 +1,10 @@
+# using nushell rm to remove something
+# [[verbs]]
+# invocation = "remove"
+# shortcut = "rm"
+# external = "rm "
+# leave_broot = false
+
 # Opening code with enter
 [[verbs]]
 name = "open-code"
