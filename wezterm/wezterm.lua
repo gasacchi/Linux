@@ -15,9 +15,10 @@ return {
   font_size = 10,
   font = w.font_with_fallback {
     "JetBrainsMono Nerd Font",
+    "Broot Icons Visual Studio Code"
   },
   -- Ignore missing glyphs
-  -- warn_about_missing_glyphs = false,
+  warn_about_missing_glyphs = false,
   -- Tab bar
   use_fancy_tab_bar = false,
   tab_bar_at_bottom = true,

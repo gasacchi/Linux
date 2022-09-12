@@ -5,13 +5,14 @@
 # h - show hidden files
 default_flags = "g"
 
+icon_theme = "vscode"
+
 # Disable mouse capture
 capture_mouse = false
 
 # show triangle in selection
 show_selection_mark = true
 
-icon_theme = "vscode"
 
 # Theme
 syntax_theme = "EightiesDark"
