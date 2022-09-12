@@ -5,7 +5,7 @@ def-env j [
   --args (-a): string
 ] {
   let cmd_file = (^mktemp | str trim)
-  if ($args | empty?) {
+  if ($args | is-empty) {
     ^broot --outcmd $cmd_file
   } else {
     ^broot $args --outcmd $cmd_file
