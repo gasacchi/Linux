@@ -21,7 +21,7 @@ let base = [
 let development = [
   {name: "git", description: "git version control"}
   {name: "upwork", description: "Freelance tools"}
-  {name: "contour-git", description: "Terminal Emulator"}
+  {name: "wezterm", description: "Terminal Emulator"}
   {name: "nushell" , description: "New kind of shell written in rust"}
   {name: "starship", description: "Pretty prompt"}
   {name: "nodejs", description: "Nodejs js on backend"}
@@ -59,7 +59,6 @@ let cli = [
   {name: "ripgrep", description: "Rg alternative"}
   {name: "tealdeer", description: "Command line cheatsheet"}
   {name: "tokei", description: "Count line of code"}
-  {name: "zellij", description: "Terminal multiplexer"}
   {name: "unrar", description: "Rar tools"}
   {name: "unzip", description: "Zip tools"}
   {name: "wget", description: "Download file"}
