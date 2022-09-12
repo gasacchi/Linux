@@ -1,161 +1,185 @@
 local w = require "wezterm"
+local a = w.action
 
-return {
-  -- Font
-  {
+-- Keybinds related to UI view
+local ui = {
+  { -- Decrease font size
     key = "-",
     mods = "LEADER",
-    action = w.action.DecreaseFontSize,
+    action = a.DecreaseFontSize,
   },
-  {
+  { -- Increase font size
     key = "+",
     mods = "LEADER|SHIFT",
-    action = w.action.IncreaseFontSize,
+    action = a.IncreaseFontSize,
   },
-  -- TAB
-  {
+  { -- Toggle full screen
+    key = "F",
+    mods = "LEADER|SHIFT",
+    action = a.ToggleFullScreen
+  },
+  { -- Show command launcher
+    key = "c",
+    mods = "LEADER",
+    action = a.ShowLauncher
+  },
+  { -- Show debug REPL
+    key = ",",
+    mods = "LEADER",
+    action = a.ShowDebugOverlay
+  },
+}
+
+-- Tab control keybinds
+local tab = {
+  { -- Spawn New tab
     key = "t",
     mods = "LEADER",
-    action = w.action.SpawnTab "CurrentPaneDomain",
+    action = a.SpawnTab "CurrentPaneDomain",
   },
-  {
+  { -- Show tab navigator
     key = "Tab",
     mods = "LEADER",
-    action = w.action.ShowTabNavigator,
+    action = a.ShowTabNavigator,
   },
-  {
+  { -- Goto next tab
     key = "n",
     mods = "LEADER",
-    action = w.action.ActivateTabRelative(1),
+    action = a.ActivateTabRelative(1),
   },
-  {
+  { -- Goto prev tab
     key = "p",
     mods = "LEADER",
-    action = w.action.ActivateTabRelative(-1),
+    action = a.ActivateTabRelative(-1),
   },
-  {
+  { -- Delete tab
     key = "D",
     mods = "LEADER|SHIFT",
-    action = w.action.CloseCurrentTab { confirm = true },
+    action = a.CloseCurrentTab { confirm = true },
   },
-  -- PANE
-  {
+}
+
+-- Pane control keybinds
+local pane = {
+  { -- Focus to left pane
     key = "h",
     mods = "LEADER",
-    action = w.action.ActivatePaneDirection "Left"
+    action = a.ActivatePaneDirection "Left"
   },
-  {
+  { -- Focus to right pane
     key = "l",
     mods = "LEADER",
-    action = w.action.ActivatePaneDirection "Right"
+    action = a.ActivatePaneDirection "Right"
   },
-  {
+  { -- Focus to pane below
     key = "j",
     mods = "LEADER",
-    action = w.action.ActivatePaneDirection "Down"
+    action = a.ActivatePaneDirection "Down"
   },
-  {
+  { -- Focus on pane above
     key = "k",
     mods = "LEADER",
-    action = w.action.ActivatePaneDirection "Up"
+    action = a.ActivatePaneDirection "Up"
   },
-  {
+  { -- Resize pane size to left direction
     key = "H",
     mods = "LEADER|SHIFT",
-    action = w.action.AdjustPaneSize { "Left", 5 }
+    action = a.AdjustPaneSize { "Left", 5 }
   },
-  {
+  { -- Resize pane size to right direction
     key = "L",
     mods = "LEADER|SHIFT",
-    action = w.action.AdjustPaneSize { "Right", 5 }
+    action = a.AdjustPaneSize { "Right", 5 }
   },
-  {
+  { -- Resize pane size to below direction
     key = "J",
     mods = "LEADER|SHIFT",
-    action = w.action.AdjustPaneSize { "Down", 5 }
+    action = a.AdjustPaneSize { "Down", 5 }
   },
-  {
+  { -- Resize pane size to above direction
     key = "K",
     mods = "LEADER|SHIFT",
-    action = w.action.AdjustPaneSize { "Up", 5 }
+    action = a.AdjustPaneSize { "Up", 5 }
   },
-  {
+  { -- Show pane selection
     key = "w",
     mods = "LEADER",
-    action = w.action.PaneSelect {
+    action = a.PaneSelect {
       alphabet = "aoeusnth"
     }
   },
-  {
+  { -- Show pane selection and swap selected pane to current active pane
     key = "W",
     mods = "LEADER|SHIFT",
-    action = w.action.PaneSelect {
+    action = a.PaneSelect {
       mode = "SwapWithActive"
     }
   },
-  {
+  { -- Delete current pane
     key = "d",
     mods = "LEADER",
-    action = w.action.CloseCurrentPane { confirm = true }
+    action = a.CloseCurrentPane { confirm = true }
   },
-  {
+  { -- Split current pane to below
     key = "s",
     mods = "LEADER",
-    action = w.action.SplitVertical { domain = "CurrentPaneDomain" }
+    action = a.SplitVertical { domain = "CurrentPaneDomain" }
   },
-  {
+  { -- Split current pane to right
     key = "v",
     mods = "LEADER",
-    action = w.action.SplitHorizontal { domain = "CurrentPaneDomain" }
+    action = a.SplitHorizontal { domain = "CurrentPaneDomain" }
   },
-  {
+  { -- Zoom current pane
     key = "f",
     mods = "LEADER",
-    action = w.action.TogglePaneZoomState
+    action = a.TogglePaneZoomState
   },
-  {
-    key = "F",
-    mods = "LEADER|SHIFT",
-    action = w.action.ToggleFullScreen
-  },
-  {
-    key = "L",
-    mods = "LEADER|SHIFT",
-    action = w.action.ShowDebugOverlay
-  },
-  {
+}
+
+-- External Commands
+local external = {
+  { -- Spawn gitui in new tab
     key = "g",
     mods = "LEADER",
-    action = w.action.SpawnCommandInNewTab {
+    action = a.SpawnCommandInNewTab {
       -- args = { "gitui" },
       args = { "nu", "/home/gasacchi/Dev/github/Linux/Scripts/wezterm-gitui.nu" },
     }
   },
-  {
+  { -- Spawn btm (system monitor) in new tab
     key = "b",
     mods = "LEADER",
-    action = w.action.SpawnCommandInNewTab {
+    action = a.SpawnCommandInNewTab {
       args = { "btm" },
     }
   },
-  {
+  { -- Spawn nyancat to new tab
     key = "Space",
     mods = "LEADER",
-    action = w.action.SpawnCommandInNewTab {
+    action = a.SpawnCommandInNewTab {
       args = { "nyancat" },
     }
   },
-  {
-    key = "c",
-    mods = "LEADER",
-    action = w.action.ShowLauncher
-  },
-  {
+  { -- Span btm with todo list
     key = "C",
     mods = "LEADER",
-    action = w.action.SpawnCommandInNewTab {
+    action = a.SpawnCommandInNewTab {
       -- args = { "broot", "/home/gasacchi/Dev/github/Stuff/todos" },
       args = { "nu", "/home/gasacchi/Dev/github/Linux/Scripts/wezterm-broot-todos.nu" },
     }
   },
 }
+
+local keybinds = {}
+
+-- Not pretty but works
+for _,key in ipairs({ui,tab,pane,external}) do
+  for _,v in ipairs(key) do
+    table.insert(keybinds, v)
+  end
+end
+
+
+return keybinds
+
