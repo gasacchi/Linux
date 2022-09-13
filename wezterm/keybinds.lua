@@ -3,6 +3,7 @@ local a = w.action
 
 -- Keybinds related to basic functionality
 local basic = {
+  { key = "q", mods = "LEADER", action = a.QuitApplication, },
   { key = "R", mods = "LEADER|SHIFT", action = a.ReloadConfiguration },
   { key = "c", mods = "CTRL|SHIFT", action = a.CopyTo "Clipboard", },
   { key = "v", mods = "CTRL|SHIFT", action = a.PasteFrom "Clipboard", },
