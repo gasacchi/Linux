@@ -1,139 +1,100 @@
 local w = require "wezterm"
 local a = w.action
 
--- Keybinds related to UI view
-local ui = {
-  { -- Decrease font size
-    key = "-",
+-- Keybinds related to basic functionality
+local basic = {
+  { key = "R", mods = "LEADER|SHIFT", action = a.ReloadConfiguration },
+  { key = "c", mods = "CTRL|SHIFT", action = a.CopyTo "Clipboard", },
+  { key = "v", mods = "CTRL|SHIFT", action = a.PasteFrom "Clipboard", },
+  { key = "-", mods = "LEADER", action = a.DecreaseFontSize, },
+  { key = "+", mods = "LEADER|SHIFT", action = a.IncreaseFontSize, },
+  { key = "=", mods = "LEADER", action = a.ResetFontSize, },
+  { key = "z", mods = "LEADER|SHIFT", action = a.ToggleFullScreen },
+  { key = "c", mods = "LEADER", action = a.ShowLauncher },
+  { key = ",", mods = "LEADER", action = a.ShowDebugOverlay },
+  { key = ".", mods = "LEADER", action = a.Search { CaseSensitiveString = "" } }
+}
+
+local activate_key_tables = {
+  {
+    key = "r",
     mods = "LEADER",
-    action = a.DecreaseFontSize,
+    action = a.ActivateKeyTable {
+      name = "resize_pane_mode",
+      one_shot = false
+    }
   },
-  { -- Increase font size
-    key = "+",
-    mods = "LEADER|SHIFT",
-    action = a.IncreaseFontSize,
-  },
-  { -- Toggle full screen
+  {
     key = "F",
     mods = "LEADER|SHIFT",
-    action = a.ToggleFullScreen
-  },
-  { -- Show command launcher
-    key = "c",
-    mods = "LEADER",
-    action = a.ShowLauncher
-  },
-  { -- Show debug REPL
-    key = ",",
-    mods = "LEADER",
-    action = a.ShowDebugOverlay
+    action = a.ActivateKeyTable {
+      name = "font_size_mode",
+      one_shot = false
+    }
   },
 }
 
 -- Tab control keybinds
 local tab = {
-  { -- Spawn New tab
-    key = "t",
-    mods = "LEADER",
-    action = a.SpawnTab "CurrentPaneDomain",
-  },
-  { -- Show tab navigator
-    key = "Tab",
-    mods = "LEADER",
-    action = a.ShowTabNavigator,
-  },
-  { -- Goto next tab
-    key = "n",
-    mods = "LEADER",
-    action = a.ActivateTabRelative(1),
-  },
-  { -- Goto prev tab
-    key = "p",
-    mods = "LEADER",
-    action = a.ActivateTabRelative(-1),
-  },
-  { -- Delete tab
+  { key = "1", mods = "LEADER", action = a.ActivateTab(0), },
+  { key = "2", mods = "LEADER", action = a.ActivateTab(1), },
+  { key = "3", mods = "LEADER", action = a.ActivateTab(2), },
+  { key = "4", mods = "LEADER", action = a.ActivateTab(3), },
+  { key = "5", mods = "LEADER", action = a.ActivateTab(4), },
+  { key = "t", mods = "LEADER", action = a.SpawnTab "CurrentPaneDomain", },
+  { key = "Tab", mods = "LEADER", action = a.ShowTabNavigator, },
+  { key = "n", mods = "LEADER", action = a.ActivateTabRelative(1), },
+  { key = "p", mods = "LEADER", action = a.ActivateTabRelative(-1), },
+  {
     key = "D",
     mods = "LEADER|SHIFT",
-    action = a.CloseCurrentTab { confirm = true },
+    action = a.CloseCurrentTab {
+      confirm = true
+    },
   },
 }
 
 -- Pane control keybinds
 local pane = {
-  { -- Focus to left pane
-    key = "h",
-    mods = "LEADER",
-    action = a.ActivatePaneDirection "Left"
-  },
-  { -- Focus to right pane
-    key = "l",
-    mods = "LEADER",
-    action = a.ActivatePaneDirection "Right"
-  },
-  { -- Focus to pane below
-    key = "j",
-    mods = "LEADER",
-    action = a.ActivatePaneDirection "Down"
-  },
-  { -- Focus on pane above
-    key = "k",
-    mods = "LEADER",
-    action = a.ActivatePaneDirection "Up"
-  },
-  { -- Resize pane size to left direction
-    key = "H",
-    mods = "LEADER|SHIFT",
-    action = a.AdjustPaneSize { "Left", 5 }
-  },
-  { -- Resize pane size to right direction
-    key = "L",
-    mods = "LEADER|SHIFT",
-    action = a.AdjustPaneSize { "Right", 5 }
-  },
-  { -- Resize pane size to below direction
-    key = "J",
-    mods = "LEADER|SHIFT",
-    action = a.AdjustPaneSize { "Down", 5 }
-  },
-  { -- Resize pane size to above direction
-    key = "K",
-    mods = "LEADER|SHIFT",
-    action = a.AdjustPaneSize { "Up", 5 }
-  },
-  { -- Show pane selection
+  { key = "h", mods = "LEADER", action = a.ActivatePaneDirection "Left" },
+  { key = "l", mods = "LEADER", action = a.ActivatePaneDirection "Right" },
+  { key = "j", mods = "LEADER", action = a.ActivatePaneDirection "Down" },
+  { key = "k", mods = "LEADER", action = a.ActivatePaneDirection "Up" },
+  { key = "f", mods = "LEADER", action = a.TogglePaneZoomState },
+  {
     key = "w",
     mods = "LEADER",
     action = a.PaneSelect {
       alphabet = "aoeusnth"
     }
   },
-  { -- Show pane selection and swap selected pane to current active pane
+  {
     key = "W",
     mods = "LEADER|SHIFT",
     action = a.PaneSelect {
       mode = "SwapWithActive"
     }
   },
-  { -- Delete current pane
+  {
     key = "d",
     mods = "LEADER",
-    action = a.CloseCurrentPane { confirm = true }
+    action = a.CloseCurrentPane {
+      confirm = true
+    }
   },
-  { -- Split current pane to below
+  {
     key = "s",
     mods = "LEADER",
-    action = a.SplitVertical { domain = "CurrentPaneDomain" }
+    action = a.SplitVertical {
+      domain = "CurrentPaneDomain"
+    }
   },
-  { -- Split current pane to right
+  {
     key = "v",
     mods = "LEADER",
-    action = a.SplitHorizontal { domain = "CurrentPaneDomain" }
-  },
-  { -- Zoom current pane
-    key = "f",
-    mods = "LEADER",
-    action = a.TogglePaneZoomState
+    action = a.SplitHorizontal {
+      domain = "CurrentPaneDomain"
+    }
   },
 }
 
@@ -174,12 +135,11 @@ local external = {
 local keybinds = {}
 
 -- Not pretty but works
-for _,key in ipairs({ui,tab,pane,external}) do
-  for _,v in ipairs(key) do
+for _, key in ipairs({ basic, activate_key_tables, tab, pane, external }) do
+  for _, v in ipairs(key) do
     table.insert(keybinds, v)
   end
 end
 
 
 return keybinds
-
