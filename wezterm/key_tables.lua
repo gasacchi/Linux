@@ -17,7 +17,7 @@ local copy_mode = {
 	{ key = 's', mods = 'CTRL', action = a.CopyMode 'MoveToStartOfLineContent' },
 	{ key = 'l', mods = 'CTRL', action = a.CopyMode 'MoveToEndOfLineContent' },
 	{ key = 'o', mods = 'SHIFT', action = a.CopyMode 'MoveToStartOfNextLine' },
-	{ key = 'TAB', mods = 'NONE', action = a.CopyMode 'MoveToSelectionOtherEnd' },
+	{ key = 'Tab', mods = 'NONE', action = a.CopyMode 'MoveToSelectionOtherEnd' },
 	{ key = 'c', mods = 'CTRL', action = a.CopyMode "Close", },
 	{ key = 'Escape', mods = 'NONE', action = a.CopyMode "Close", },
 	{ key = 'v',
@@ -66,12 +66,10 @@ local font_size_mode = {
 	{ key = 'c', mods = 'CTRL', action = "PopKeyTable" },
 	{ key = 'Enter', mods = 'NONE', action = "PopKeyTable" },
 }
-local scroll_mode = {}
 
 return {
-	-- copy_mode,
+	copy_mode = copy_mode,
 	search_mode = search_mode,
 	font_size_mode = font_size_mode,
 	resize_pane_mode = resize_pane_mode,
-	-- scroll_mode,
 }
