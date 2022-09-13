@@ -16,6 +16,12 @@ local basic = {
 }
 
 local activate_key_tables = {
+  { key = "S", mods = "LEADER|SHIFT", action = a.Search { CaseSensitiveString = "" } },
+  {
+    key = ".",
+    mods = "LEADER",
+    action = a.ActivateCopyMode
+  },
   {
     key = "r",
     mods = "LEADER",
