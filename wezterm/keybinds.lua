@@ -24,6 +24,14 @@ local activate_key_tables = {
     action = a.ActivateCopyMode
   },
   {
+    key = "s",
+    mods = "LEADER|CTRL",
+    action = a.ActivateKeyTable {
+      name = "scroll_mode",
+      one_shot = false
+    }
+  },
+  {
     key = "r",
     mods = "LEADER",
     action = a.ActivateKeyTable {

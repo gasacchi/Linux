@@ -58,6 +58,14 @@ local resize_pane_mode = {
 	{ key = 'Enter', mods = 'NONE', action = "PopKeyTable" },
 }
 
+-- Scroll mode
+local scroll_mode = {
+	{ key = 'j', mods = 'NONE', action = a.ScrollByPage(1) },
+	{ key = 'k', mods = 'NONE', action = a.ScrollByPage(-1) },
+	{ key = 'c', mods = 'CTRL', action = "PopKeyTable" },
+	{ key = 'Enter', mods = 'NONE', action = "PopKeyTable" },
+}
+
 -- Font size mode
 local font_size_mode = {
 	{ key = 'j', mods = 'NONE', action = a.DecreaseFontSize },
@@ -70,6 +78,7 @@ local font_size_mode = {
 return {
 	copy_mode = copy_mode,
 	search_mode = search_mode,
+	scroll_mode = scroll_mode,
 	font_size_mode = font_size_mode,
 	resize_pane_mode = resize_pane_mode,
 }
