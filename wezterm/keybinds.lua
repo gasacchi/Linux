@@ -1,6 +1,8 @@
 local w = require "wezterm"
 local a = w.action
 
+local scripts_dir = w.config_dir .. "/scripts/"
+
 -- Keybinds related to basic functionality
 local basic = {
   { key = "q", mods = "LEADER", action = a.QuitApplication, },
@@ -10,10 +12,12 @@ local basic = {
   { key = "-", mods = "LEADER", action = a.DecreaseFontSize, },
   { key = "+", mods = "LEADER|SHIFT", action = a.IncreaseFontSize, },
   { key = "=", mods = "LEADER", action = a.ResetFontSize, },
-  { key = "z", mods = "LEADER|SHIFT", action = a.ToggleFullScreen },
+  { key = "z", mods = "LEADER", action = a.ToggleFullScreen },
   { key = "c", mods = "LEADER", action = a.ShowLauncher },
+  { key = "m", mods = "LEADER", action = a.EmitEvent "maximize_window"},
   { key = ",", mods = "LEADER", action = a.ShowDebugOverlay },
-  { key = ".", mods = "LEADER", action = a.Search { CaseSensitiveString = "" } }
+  { key = ".", mods = "LEADER", action = a.Search { CaseSensitiveString = "" } },
+  { key = "e", mods = "LEADER", action = a.EmitEvent "broot-toggle"},
 }
 
 local activate_key_tables = {
@@ -56,7 +60,7 @@ local tab = {
   { key = "3", mods = "LEADER", action = a.ActivateTab(2), },
   { key = "4", mods = "LEADER", action = a.ActivateTab(3), },
   { key = "5", mods = "LEADER", action = a.ActivateTab(4), },
-  { key = "t", mods = "LEADER", action = a.SpawnTab "CurrentPaneDomain", },
+  { key = "t", mods = "LEADER", action = a.SpawnTab "DefaultDomain" },
   { key = "Tab", mods = "LEADER", action = a.ShowTabNavigator, },
   { key = "n", mods = "LEADER", action = a.ActivateTabRelative(1), },
   { key = "p", mods = "LEADER", action = a.ActivateTabRelative(-1), },
@@ -119,8 +123,7 @@ local external = {
     key = "g",
     mods = "LEADER",
     action = a.SpawnCommandInNewTab {
-      -- args = { "gitui" },
-      args = { "nu", "/home/gasacchi/Dev/github/Linux/Scripts/wezterm-gitui.nu" },
+      args = { "nu", scripts_dir .. "gitui.nu" },
     }
   },
   { -- Spawn btm (system monitor) in new tab
@@ -141,8 +144,7 @@ local external = {
     key = "C",
     mods = "LEADER",
     action = a.SpawnCommandInNewTab {
-      -- args = { "broot", "/home/gasacchi/Dev/github/Stuff/todos" },
-      args = { "nu", "/home/gasacchi/Dev/github/Linux/Scripts/wezterm-broot-todos.nu" },
+      args = { "nu", scripts_dir .. "broot-todos.nu" },
     }
   },
 }

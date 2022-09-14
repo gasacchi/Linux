@@ -1,11 +1,9 @@
 local w = require "wezterm"
+local events = require"events"
 local keys = require "keybinds"
 local key_tables = require "key_tables"
 
--- Notification when config is reloaded
--- w.on('window-config-reloaded', function(window, _)
---   window:toast_notification('wezterm', 'configuration reloaded!', nil, 1000)
--- end)
+events.register()
 
 return {
   disable_default_key_bindings = true,
