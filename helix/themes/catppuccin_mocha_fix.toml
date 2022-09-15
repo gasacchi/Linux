@@ -22,7 +22,7 @@
 
 "label" = "sapphire" # used for lifetimes
 
-"punctuation" = "overlay2"
+"punctuation" = "peach"
 
 "keyword" = "mauve"
 "keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] }
