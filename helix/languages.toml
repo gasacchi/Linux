@@ -1,0 +1,23 @@
+# Fennel language support
+[[language]]
+name = "fennel"
+scope = "source.fennel"
+injection-regex = "fennel"
+file-types = ["fnl", "fennel"]
+roots = ["main.fnl", "*.fnl"]
+# formatter = { command = "fnlfmt" }
+# auto-format = true
+comment-token = ";;"
+language-server = { command = "fennel-ls" }
+indent = { tab-width = 4, unit = "    " }
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+
+[[grammar]]
+name = "fennel"
+# source = { git = "https://github.com/travonted/tree-sitter-fennel", rev = "517195970428aacca60891b050aa53eabf4ba78d" }
+source = { path = "/home/gasacchi/Dev/fork/tree-sitter-fennel" }
