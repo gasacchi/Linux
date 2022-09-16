@@ -1,5 +1,5 @@
 (local w (require :wezterm))
-(local a (. w :action))
+(local a w.action)
 
 ;; Keytables mode
 (local copy-mode

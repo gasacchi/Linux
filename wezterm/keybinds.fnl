@@ -14,7 +14,7 @@
         {:key "=" :mods :LEADER :action (. a :ResetFontSize)}
         {:key :z :mods :LEADER :action (. a :ToggleFullScreen)}
         {:key :c :mods :LEADER :action (. a :ShowLauncher)}
-        {:key :m :mods :LEADER :action ((. a :EmitEvent) :maximize_window)}
+        {:key :m :mods :LEADER :action ((. a :EmitEvent) :toggle-maximize)}
         {:key "," :mods :LEADER :action (. a :ShowDebugOverlay)}
         {:key "."
          :mods :LEADER

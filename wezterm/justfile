@@ -1,0 +1,15 @@
+build-module:
+	@rm -vf events.lua key-tables.lua keybinds.lua launch-menu.lua
+	fennel -c events.fnl > events.lua
+	fennel -c key-tables.fnl > key-tables.lua
+	fennel -c keybinds.fnl > keybinds.lua
+	fennel -c launch-menu.fnl > launch-menu.lua
+
+build-wezterm:
+	@rm -vf wezterm.lua
+	fennel -c wezterm.fnl > wezterm.lua
+
+build-all: build-module build-wezterm
+	@echo "building all config"
+	
+	
