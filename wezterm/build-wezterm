@@ -1,4 +1,4 @@
-;;/usr/bin/fennel
+#!/usr/bin/fennel
 ;; build fennel file in wezterm directiory
 (local target-dir "~/.config/wezterm")
 (local file-list [:wezterm :launch-menu :keybinds :key-tables])
