@@ -5,6 +5,10 @@
 (local key-tables (require :key-tables))
 
 
+;; background gif path
+(local bg-path "/home/gasacchi/Dev/github/Linux/assets/HayasakaAi-opt.gif")
+
+
 ;; Register all custom events
 (events.register)
 
@@ -25,5 +29,6 @@
  :use_fancy_tab_bar false
  :tab_bar_at_bottom true
  :window_decorations :NONE
- :window_background_image :/home/gasacchi/Pictures/HayasakaAi-opt.gif
+ ;; :window_decorations :TITLE|RESIZE
+ :window_background_image bg-path
  :window_background_opacity 1.0}
