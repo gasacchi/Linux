@@ -31,16 +31,39 @@
 
 ;; Toggle window maximize
 ;; TODO: check if full screen
-(fn toggle-maximize-fn [window _]
-  (let [window-size (. (window:get_dimensions) :pixel_width)]
-    (if (= window-size 1366)
-        (window:restore)
-        (window:maximize))))
+(fn toggle-maximize-window-fn [window _]
+  (let [window-height (. (window:get_dimensions) :pixel_height)
+        is-fullscreen? (. (window:get_dimensions) :is_fullscreen)]
+    ;; 744: when maximize without fullscreen
+    ;; 768: when fullscreen
+    (if (< window-height 744)
+
+        (window:maximize)
+
+        (window:restore))))
+
+;; (fn toggle-maximize-window-fn [window _]
+;;   (let [window-size (. (window:get_dimensions) :pixel_width)
+;;         is-fullscreen? (. (window:get_dimensions) :is_fullscreen)]
+;;         (do
+;;           (print window-size) 
+;;           (print is-fullscreen?)
+;;           (print (. (window:get_dimensions) :pixel_height)))))
+
+(fn rebuild-config-fn [window pane]
+  (let [wez-path w.config_dir
+        cmd (.. "cd " wez-path "; just build-all; sleep 2sec")]
+    (do
+      (window:perform_action 
+        (a.Multiple 
+          [(a.SpawnCommandInNewTab {:args [:nu :-c cmd]})])
+        pane))))
 
 ;; Register all events
 (fn register []
   (do
+    (w.on :rebuild-config rebuild-config-fn)
     (w.on :broot-toggle broot-toggle-fn)
-    (w.on :toggle-maximize toggle-maximize-fn)))
+    (w.on :toggle-maximize-window toggle-maximize-window-fn)))
 
 {: register}

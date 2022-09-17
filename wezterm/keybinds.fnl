@@ -9,12 +9,12 @@
 ;; Keybinds related to basic functionality
 (local basic
   [{:key :q :mods :LEADER :action a.QuitApplication}
-   {:key :R :mods :LEADER|SHIFT :action a.ReloadConfiguration}
+   {:key :R :mods :LEADER|SHIFT :action (a.EmitEvent :rebuild-config)}
    {:key :c :mods :CTRL|SHIFT :action (a.CopyTo :Clipboard)}
    {:key :v :mods :CTRL|SHIFT :action (a.PasteFrom :Clipboard)}
    {:key :z :mods :LEADER :action a.ToggleFullScreen}
    {:key :c :mods :LEADER :action a.ShowLauncher}
-   {:key :m :mods :LEADER :action (a.EmitEvent :toggle-maximize)}
+   {:key :m :mods :LEADER :action (a.EmitEvent :toggle-maximize-window)}
    {:key :e :mods :LEADER :action (a.EmitEvent :broot-toggle)}
    {:key "," :mods :LEADER :action a.ShowDebugOverlay}
    {:key "."
