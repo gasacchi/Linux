@@ -1,3 +1,4 @@
+;;; Custom wezterm events
 (local w (require :wezterm))
 (local a w.action)
 
@@ -24,9 +25,11 @@
 ;;                                                                      :size {:Percent 20}})])
 ;;                                 pane)))))))
 
+;; Toggle broot like file tree
 (fn broot-toggle-fn [win curr-pane]
   (print "here"))
 
+;; Toggle window maximize
 ;; TODO: check if full screen
 (fn toggle-maximize-fn [window _]
   (let [window-size (. (window:get_dimensions) :pixel_width)]
@@ -34,6 +37,7 @@
         (window:restore)
         (window:maximize))))
 
+;; Register all events
 (fn register []
   (do
     (w.on :broot-toggle broot-toggle-fn)

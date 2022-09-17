@@ -1,19 +1,13 @@
+;;; Wezterm Configuration file
 (local wez (require :wezterm))
 (local keys (require :keybinds))
 (local events (require :events))
 (local key-tables (require :key-tables))
 
-(local wez-path (.. wez.config_dir "/"))
 
-;; (local watch-list [:event.lua 
-;;                    :keybinds.lua 
-;;                    :key-tables.lua 
-;;                    :launch-menu.lua])
-
+;; Register all custom events
 (events.register)
 
-;; (each [_ file (ipairs watch-list)]
-;;     (wez.add_to_config_reload_watch_list (.. wez-path file)))
 
 {:disable_default_key_bindings true
  :automatically_reload_config true

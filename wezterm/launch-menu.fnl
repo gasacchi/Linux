@@ -1,4 +1,2 @@
-;; change style
-(local launch-menu {})
-
-launch-menu
+;;; Launch menu list
+{}
