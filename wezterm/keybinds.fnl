@@ -15,7 +15,7 @@
    {:key :z :mods :LEADER :action a.ToggleFullScreen}
    {:key :c :mods :LEADER :action a.ShowLauncher}
    {:key :m :mods :LEADER :action (a.EmitEvent :toggle-maximize-window)}
-   {:key :e :mods :LEADER :action (a.EmitEvent :broot-toggle)}
+   {:key :e :mods :LEADER :action (a.EmitEvent :toggle-broot)}
    {:key "," :mods :LEADER :action a.ShowDebugOverlay}
    {:key "."
     :mods :LEADER
