@@ -9,7 +9,7 @@ roots = ["main.fnl", "*.fnl"]
 # auto-format = true
 shebangs = ["fennel"]
 comment-token = ";;"
-# language-server = { command = "fennel-ls" }
+language-server = { command = "fennel-ls" }
 indent = { tab-width = 2, unit = "  " }
 
 [language.auto-pairs]
