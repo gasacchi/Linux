@@ -1,2 +1,3 @@
 bin/* binary
 bin/* linguist-vendored
+*.nu linguist-vendored
