@@ -53,6 +53,7 @@ let daily = [
 ]
 
 let cli = [
+  {name: "github-cli", description: "Github CLI"}
   {name: "bat", description: "Cat alternative"}
   {name: "bottom", description: "System resources monitor"}
   # change to xplr
