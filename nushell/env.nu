@@ -4,7 +4,8 @@ let pnpm_path = '~/.local/share/pnpm'
 let local_bin = '~/.local/bin'
 let workspace_bin = '~/Dev/github/Linux/bin'
 
-let-env EDITOR = 'helix'
+let-env EDITOR = "helix"
+let-env BAT_THEME = "Catppuccin-mocha"
 let-env PNPM_HOME = $pnpm_path
 let-env RUST_PATH = "~/.cargo/bin"
 let-env PATH = ($env.PATH 
