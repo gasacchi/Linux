@@ -17,7 +17,6 @@ alias du = dust
 ## CLI Tools Aliases
 alias cat = bat --theme="Catppuccin-mocha"
 alias g = gitui
-alias n = navi --path ~/.config/navi/cheats
 
 ## Git alias
 alias gp = git push

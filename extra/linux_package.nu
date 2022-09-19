@@ -53,8 +53,6 @@ let daily = [
 ]
 
 let cli = [
-  {name: "navi-bin", description: "Interactive cheatsheet cli"}
-  {name: "fzf", description: "find file needed for navi"}
   {name: "bat", description: "Cat alternative"}
   {name: "bottom", description: "System resources monitor"}
   # change to xplr
