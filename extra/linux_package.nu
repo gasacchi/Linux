@@ -3,6 +3,9 @@ def add_category [name, val: string] {
 }
 
 let base = [
+  {name: "linux", description: "linux kernel"}
+  {name: "linux-firmware", description: "linux firmware"}
+  {name: "linux-headers", description: "linux headers file"}
   {name: "intel-ucode", description: "intel microcode"}
   {name: "xf86-video-intel", description: "intel video driver"}
   {name: "dosfstool", description: "DOS disk utility"}
@@ -20,8 +23,10 @@ let base = [
 
 let development = [
   {name: "git", description: "git version control"}
+  {name: "rustup", description: "rust installer"}
+  {name: "rust-analyzer", description: "rust code analyzer"}
   {name: "upwork", description: "Freelance tools"}
-  {name: "wezterm", description: "Terminal Emulator"}
+  {name: "wezterm-nightly-bin", description: "Terminal Emulator"}
   {name: "nushell" , description: "New kind of shell written in rust"}
   {name: "starship", description: "Pretty prompt"}
   {name: "nodejs", description: "Nodejs js on backend"}
@@ -29,6 +34,9 @@ let development = [
   {name: "wl-clipboard", description: "Wayland clipboard"}
   {name: "figma-linux-bin", description: "Web UI Design tools"}
   {name: "pnpm-bin", description: "Better npm"}
+  {name: "fennel", description: "Fennel programming language"}
+  {name: "lua-language-server", description: "lua language server"}
+  {name: "just", description: "Command runner like make"}
 ]
 
 let hardware_development = [
@@ -47,6 +55,7 @@ let daily = [
 let cli = [
   {name: "bat", description: "Cat alternative"}
   {name: "bottom", description: "System resources monitor"}
+  # change to xplr
   {name: "broot", description: "New way to navigate to file/folder"}
   {name: "duf", description: "Disk usage / free Utility better than df"}
   {name: "dust", description: "Intuitive version from du"}
