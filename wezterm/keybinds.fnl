@@ -9,7 +9,8 @@
 ;; Keybinds related to basic functionality
 (local basic
   [{:key :q :mods :LEADER :action a.QuitApplication}
-   {:key :R :mods :LEADER|SHIFT :action (a.EmitEvent :rebuild-config)}
+   {:key :R :mods :LEADER|SHIFT :action :ReloadConfiguration}
+   {:key :b :mods :LEADER :action (a.EmitEvent :rebuild-config)}
    {:key :c :mods :CTRL|SHIFT :action (a.CopyTo :Clipboard)}
    {:key :v :mods :CTRL|SHIFT :action (a.PasteFrom :Clipboard)}
    {:key :z :mods :LEADER :action a.ToggleFullScreen}
@@ -83,8 +84,8 @@
     :mods :LEADER
     :action (a.SpawnCommandInNewTab {:args [:nu
                                            (.. scripts-dir :gitui.nu)]})}
-   {:key :b
-    :mods :LEADER
+   {:key :B
+    :mods :LEADER|SHIFT
     :action (a.SpawnCommandInNewTab {:args [:btm]})}
    {:key :Space
     :mods :LEADER
