@@ -6,6 +6,7 @@ alias lla = ls -la
 alias la = ls -a
 alias e = helix
 alias z = zellij
+alias p = pnpm
 
 # Common utils with -v verbose option
 alias rm = rm -v
