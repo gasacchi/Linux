@@ -29,6 +29,5 @@
  :use_fancy_tab_bar false
  :tab_bar_at_bottom true
  :window_decorations :NONE
- ;; :window_decorations :TITLE|RESIZE
  :window_background_image bg-path
  :window_background_opacity 1.0}
