@@ -1,15 +1,14 @@
 # Nushell Environment Config File
 
-let pnpm_path = '~/.local/share/pnpm'
 let local_bin = '~/.local/bin'
 let workspace_bin = '~/Dev/github/Linux/bin'
 
 let-env EDITOR = "helix"
 let-env BAT_THEME = "Catppuccin-mocha"
-let-env PNPM_HOME = $pnpm_path
+let-env PNPM_HOME = "/home/gasacchi/.local/share/pnpm"
 let-env RUST_PATH = "~/.cargo/bin"
 let-env PATH = ($env.PATH 
-                    | append $pnpm_path 
+                    | append $env.PNPM_HOME
                     | append $local_bin
                     | append $workspace_bin)
 
