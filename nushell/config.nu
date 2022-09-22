@@ -1,13 +1,11 @@
 # Nushell Config File
 
-# source scripts
+# sourcing scripts
 # source alias
 source ~/.config/nushell/alias.nu
 source ~/.config/nushell/functions.nu
 source ~/.config/nushell/completions.nu
 source ~/.config/nushell/themes/catppuccin_mocha.nu
-
-use completions *
 
 # Get just the extern definitions without the custom completion commands
 
