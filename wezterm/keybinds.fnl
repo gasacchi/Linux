@@ -92,9 +92,10 @@
     :action (a.SpawnCommandInNewTab {:args [:nyancat]})}
    {:key :C
     :mods :LEADER
-    :action (a.SpawnCommandInNewTab {:args [:nu
-                                           (.. scripts-dir
-                                           :broot-todos.nu)]})}])
+    :action (a.SpawnCommandInNewTab {:args 
+                                      [:nu
+                                       :-c
+                                       "helix ~/Dev/github/Stuff/todos/TODO.md"]})}])
 
 (local keybinds [])
 (local keys [basic activate-key-tables tab pane external])
