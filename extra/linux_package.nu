@@ -56,7 +56,6 @@ let cli = [
   {name: "github-cli", description: "Github CLI"}
   {name: "bat", description: "Cat alternative"}
   {name: "bottom", description: "System resources monitor"}
-  # change to xplr
   {name: "broot", description: "New way to navigate to file/folder"}
   {name: "duf", description: "Disk usage / free Utility better than df"}
   {name: "dust", description: "Intuitive version from du"}
@@ -100,6 +99,7 @@ let desktop = [
 ]
 
 let tauri_requirement = [
+  {name: "cargo-tauri", description: "tauri cli"}
   {name: "webkit2gtk", description: ""}
   {name: "base-devel", description: ""}
   {name: "curl", description: ""}
