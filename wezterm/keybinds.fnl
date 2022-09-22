@@ -71,6 +71,9 @@
    {:key :d
     :mods :LEADER
     :action (a.CloseCurrentPane {:confirm true})}
+   {:key :D
+    :mods :LEADER|SHIFT
+    :action (a.EmitEvent :close-other-pane )}
    {:key :s
     :mods :LEADER
     :action (a.SplitVertical {:domain :CurrentPaneDomain})}

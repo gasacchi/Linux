@@ -1,6 +1,21 @@
 ;;; Custom wezterm events
 (local w (require :wezterm))
 (local a w.action)
+(local mux w.mux)
+
+
+;; Close all pane but current
+(fn close-other-pane-fn [window pane]
+  ;; get all inactive pane index
+  (let [other-pane (icollect [_ p (ipairs (: (pane:tab) :panes_with_info))]
+                       (if (not p.is_active) p.index))]
+    (each [_ id (ipairs other-pane)]
+      ;; perform activation on inactive pane and close it
+      (window:perform_action
+        (a.Multiple 
+          [(a.ActivatePaneByIndex id)
+           (a.CloseCurrentPane {:confirm false})])
+        pane))))
 
 
 ;; Close broot commands
@@ -25,6 +40,7 @@
 
 ;; toggle broot like nerd tree
 (fn toggle-broot-fn [window pane]
+  ;; check if broot already exist in current tab
   (let [broot-exist? (= (: (. (: (pane:tab) :panes) 1) :get_title) :broot)]
     (if broot-exist?
         (close-broot {: window : pane}) 
@@ -59,9 +75,22 @@
         pane))))
 
 
+;; local tab, pane, window = mux.spawn_window(cmd or {})
+;;   window:gui_window():maximize()
+
+(fn startup-fn []
+  (let [(_ pane window) (mux.spawn_window {})]
+    (do
+      (print 1)
+      (print 2)
+      (pane:split {:direction :Top}))))
+
+
 ;; Register all events
 (fn register []
   (do
+    (w.on :mux-startup startup-fn)
+    (w.on :close-other-pane close-other-pane-fn)
     (w.on :rebuild-config rebuild-config-fn)
     (w.on :toggle-broot toggle-broot-fn)
     (w.on :toggle-maximize-window toggle-maximize-window-fn)))
