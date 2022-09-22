@@ -1,10 +1,11 @@
+source ~/.config/nushell/themes/catppuccin_mocha.nu
 let menus = [
   # Configuration for default nushell menus
   # Note the lack of souce parameter
   {
     name: completion_menu
     only_buffer_difference: false
-    marker: "| "
+    marker: " completions: "
     type: {
         layout: columnar
         columns: 4
@@ -12,29 +13,29 @@ let menus = [
         col_padding: 2
     }
     style: {
-        text: green
-        selected_text: green_reverse
-        description_text: yellow
+        text: $blue
+        selected_text: {bg: $surface_2 fg: $text}
+        description_text: $green
     }
   }
   {
     name: history_menu
     only_buffer_difference: true
-    marker: "? "
+    marker: " history: "
     type: {
         layout: list
         page_size: 10
     }
     style: {
-        text: green
-        selected_text: green_reverse
-        description_text: yellow
+        text: $blue
+        selected_text: {bg: $surface_2 fg: $text}
+        description_text: $green
     }
   }
   {
     name: help_menu
     only_buffer_difference: true
-    marker: "? "
+    marker: " help: "
     type: {
         layout: description
         columns: 4
@@ -44,9 +45,9 @@ let menus = [
         description_rows: 10
     }
     style: {
-        text: green
-        selected_text: green_reverse
-        description_text: yellow
+        text: $blue
+        selected_text: {bg: $surface_2 fg: $text}
+        description_text: $green
     }
   }
   # Example of extra menus created using a nushell source
@@ -55,7 +56,7 @@ let menus = [
   {
     name: commands_menu
     only_buffer_difference: false
-    marker: "# "
+    marker: " commands: "
     type: {
         layout: columnar
         columns: 4
@@ -63,9 +64,9 @@ let menus = [
         col_padding: 2
     }
     style: {
-        text: green
-        selected_text: green_reverse
-        description_text: yellow
+        text: $blue
+        selected_text:{bg: $surface_2 fg: $text}
+        description_text: $green
     }
     source: { |buffer, position|
         $nu.scope.commands
@@ -76,15 +77,15 @@ let menus = [
   {
     name: vars_menu
     only_buffer_difference: true
-    marker: "# "
+    marker: " vars: "
     type: {
         layout: list
         page_size: 10
     }
     style: {
-        text: green
-        selected_text: green_reverse
-        description_text: yellow
+        text: $blue
+        selected_text: {bg: $surface_2 fg: $text}
+        description_text: $green
     }
     source: { |buffer, position|
         $nu.scope.vars
@@ -96,7 +97,7 @@ let menus = [
   {
     name: commands_with_description
     only_buffer_difference: true
-    marker: "# "
+    marker: " commands: "
     type: {
         layout: description
         columns: 4
@@ -106,9 +107,9 @@ let menus = [
         description_rows: 10
     }
     style: {
-        text: green
-        selected_text: green_reverse
-        description_text: yellow
+        text: $blue
+        selected_text: {bg: $surface_2 fg: $text}
+        description_text: $green
     }
     source: { |buffer, position|
         $nu.scope.commands

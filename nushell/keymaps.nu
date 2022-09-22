@@ -25,13 +25,13 @@ let keymaps = [
     mode: emacs
     event: { send: menu name: history_menu }
   }
-  {
-    name: next_page
-    modifier: control
-    keycode: char_x
-    mode: emacs
-    event: { send: menupagenext }
-  }
+  # {
+  #   name: next_page
+  #   modifier: control
+  #   keycode: char_x
+  #   mode: emacs
+  #   event: { send: menupagenext }
+  # }
   {
     name: undo_or_previous_page
     modifier: control
@@ -81,7 +81,7 @@ let keymaps = [
   {
     name: commands_menu
     modifier: control
-    keycode: char_t
+    keycode: char_x
     mode: [emacs, vi_normal, vi_insert]
     event: { send: menu name: commands_menu }
   }
