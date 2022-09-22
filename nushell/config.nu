@@ -1,36 +1,13 @@
 # Nushell Config File
 
-# Aliases
-alias ll = ls -l
-alias lla = ls -la
-alias la = ls -a
-alias e = helix
-alias z = zellij
-alias p = pnpm
-
-# Common utils with -v verbose option
-alias rm = rm -v
-alias mv = mv -v
-alias cp = cp -v
-alias ln = ln -v
-alias du = dust
-
-## CLI Tools Aliases
-alias cat = bat
-alias g = gitui
-
-## Git alias
-alias gp = git push
-alias gc = git commit
-alias gs = git status
-alias ga = git add
-
 # source scripts
+# source alias
+source ~/.config/nushell/alias.nu
 source ~/.config/nushell/functions.nu
 source ~/.config/nushell/completions.nu
-use completions *
 source ~/.config/nushell/themes/catppuccin_mocha.nu
-# module completions 
+
+use completions *
 
 # Get just the extern definitions without the custom completion commands
 
