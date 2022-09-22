@@ -51,7 +51,7 @@
 ;; case when fail to compile
 (fn rebuild-config-fn [window pane]
   (let [wez-path w.config_dir
-        cmd (.. "cd " wez-path "; just; sleep 2sec")]
+        cmd (.. "cd " wez-path "; just; sleep 1sec")]
     (do
       (window:perform_action 
         (a.Multiple 
