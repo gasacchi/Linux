@@ -4,6 +4,9 @@ alias lla = ls -la
 alias la = ls -a
 alias e = helix
 alias p = pnpm
+alias pi = pnpm install
+alias pd = pnpm install -D
+alias prm = pnpm rm
 
 # Common utils with -v verbose option
 alias rm = rm -v
