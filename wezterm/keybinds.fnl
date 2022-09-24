@@ -10,6 +10,7 @@
 (local basic
   [{:key :q :mods :LEADER :action a.QuitApplication}
    {:key :R :mods :LEADER|SHIFT :action :ReloadConfiguration}
+   {:key :T :mods :LEADER|SHIFT :action (a.EmitEvent :open-workspace)}
    {:key :b :mods :LEADER :action (a.EmitEvent :rebuild-config)}
    {:key :c :mods :CTRL|SHIFT :action (a.CopyTo :Clipboard)}
    {:key :v :mods :CTRL|SHIFT :action (a.PasteFrom :Clipboard)}

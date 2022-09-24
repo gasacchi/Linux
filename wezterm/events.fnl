@@ -3,6 +3,68 @@
 (local a w.action)
 (local mux w.mux)
 
+(fn send-string-and-enter [window pane cmd]
+  (window:perform_action
+    (a.Multiple 
+      [(a.SendString cmd)
+       (a.SendKey {:key :Enter})])
+    pane))
+
+(fn split-pane-with-cmd [window pane cmd]
+  (window:perform_action
+    (a.SplitPane {:direction :Right 
+                     :command {:args [:nu :-l :-e cmd ]}
+                     :size {:Percent 30}}) 
+    pane))
+
+(fn spawn-tab [window pane]
+  (window:perform_action 
+    (a.SpawnTab :DefaultDomain)
+    pane))
+    
+(fn back-to-first-pane [window pane]
+  (window:perform_action 
+    (a.Multiple 
+      [(a.ActivateTab 0)
+       (a.ActivatePaneByIndex 0)]) 
+    pane))
+
+(fn open-workspace-fn [window pane]
+  (let [repo-path "~/Dev/github/Yoru/"
+        ui-path (.. repo-path "editor-ui/")
+        tauri-path (.. repo-path "src-tauri/")
+        only-one-tab? (= (length (: (window:mux_window) :tabs)) 1)
+        only-one-pane? (= (length (: (pane:tab) :panes)) 1)]
+    (if (and only-one-tab? only-one-pane?)
+      (do
+        (send-string-and-enter window pane (.. "cd " ui-path ";" "e")) 
+        (w.sleep_ms 500) 
+        (split-pane-with-cmd window pane (.. "cd " ui-path))
+        (w.sleep_ms 500)  
+        (spawn-tab window pane)
+        (w.sleep_ms 500)
+        (send-string-and-enter 
+          window 
+          (. (: (. (: (window:mux_window) :tabs) 2) :panes) 1)
+          (.. "cd " tauri-path ";" "e")) 
+        (w.sleep_ms 500)
+        (split-pane-with-cmd window pane (.. "cd " tauri-path))
+        (w.sleep_ms 500)
+        (spawn-tab window pane)
+        (w.sleep_ms 500)
+        (send-string-and-enter 
+          window 
+          (. (: (. (: (window:mux_window) :tabs) 3) :panes) 1)
+          (.. "cd " tauri-path ";" "cargo tauri dev"))
+        (w.sleep_ms 500)
+        (back-to-first-pane window pane))
+        ;; )
+        
+        
+      (window:toast_notification 
+        :wezterm "Cannot open workspace tab & pane > 1" 
+        nil
+        100))))
 
 ;; Close all pane but current
 (fn close-other-pane-fn [window pane]
@@ -91,6 +153,7 @@
   (do
     (w.on :mux-startup startup-fn)
     (w.on :close-other-pane close-other-pane-fn)
+    (w.on :open-workspace open-workspace-fn)
     (w.on :rebuild-config rebuild-config-fn)
     (w.on :toggle-broot toggle-broot-fn)
     (w.on :toggle-maximize-window toggle-maximize-window-fn)))
