@@ -10,11 +10,11 @@
        (a.SendKey {:key :Enter})])
     pane))
 
-(fn split-pane-with-cmd [window pane cmd]
+(fn split-pane-with-cmd [window pane cmd direction size]
   (window:perform_action
-    (a.SplitPane {:direction :Right 
+    (a.SplitPane {: direction
                      :command {:args [:nu :-l :-e cmd ]}
-                     :size {:Percent 30}}) 
+                     :size {:Percent size}}) 
     pane))
 
 (fn spawn-tab [window pane]
@@ -39,7 +39,15 @@
       (do
         (send-string-and-enter window pane (.. "cd " ui-path ";" "e")) 
         (w.sleep_ms 500) 
-        (split-pane-with-cmd window pane (.. "cd " ui-path))
+        (split-pane-with-cmd 
+          window 
+          pane 
+          (.. "cd " ui-path) :Right 30)
+        (w.sleep_ms 500)  
+        (split-pane-with-cmd 
+          window 
+          pane 
+          (.. :e " " repo-path :TODOS.md) :Up 40)
         (w.sleep_ms 500)  
         (spawn-tab window pane)
         (w.sleep_ms 500)
@@ -48,7 +56,10 @@
           (. (: (. (: (window:mux_window) :tabs) 2) :panes) 1)
           (.. "cd " tauri-path ";" "e")) 
         (w.sleep_ms 500)
-        (split-pane-with-cmd window pane (.. "cd " tauri-path))
+        (split-pane-with-cmd 
+          window 
+          pane 
+          (.. "cd " tauri-path) :Right 30)
         (w.sleep_ms 500)
         (spawn-tab window pane)
         (w.sleep_ms 500)
