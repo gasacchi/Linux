@@ -68,8 +68,12 @@
           (. (: (. (: (window:mux_window) :tabs) 3) :panes) 1)
           (.. "cd " tauri-path ";" "cargo tauri dev"))
         (w.sleep_ms 500)
+        (split-pane-with-cmd 
+          window 
+          pane 
+          (.. "cd " ui-path ";" "pnpm re:watch") :Right 50)
+        (w.sleep_ms 500)
         (back-to-first-pane window pane))
-        ;; )
         
         
       (window:toast_notification 
