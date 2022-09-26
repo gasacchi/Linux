@@ -22,3 +22,27 @@ indent = { tab-width = 2, unit = "  " }
 name = "fennel"
 # source = { git = "https://github.com/travonted/tree-sitter-fennel", rev = "517195970428aacca60891b050aa53eabf4ba78d" }
 source = { path = "/home/gasacchi/Dev/fork/tree-sitter-fennel" }
+
+[[language]]
+name = "rescript"
+scope = "source.rescript"
+injection-regex = "rescript"
+file-types = ["res", "resi"]
+roots = ["bsconfig.json"]
+auto-format = true
+comment-token = "//"
+language-server = { command = "rescript-language-server", args = ["--stdio"] }
+indent = { tab-width = 2, unit = "  " }
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[[grammar]]
+name = "rescript"
+source = { git = "https://github.com/jaredramirez/tree-sitter-rescript", rev = "4cd7ba91696886fdaca086fb32b5fd8cc294a129" }
+
