@@ -15,7 +15,7 @@ def "gsc sys" [
 ] {
   if $cmd == (sys_cmds).0 {
     echo "Rebooting the system..."
-    ^roboot
+    ^reboot
   } else if $cmd == (sys_cmds).1 {
     echo "Shutting down the system..."
     ^shutdown now
