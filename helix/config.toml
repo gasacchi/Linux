@@ -29,7 +29,7 @@ color-modes = true
 # Statusline ------------------------------------------------------------------
 [editor.statusline]
 left = ["mode", "file-name", "selections"]
-center = ["file-type", "spinner", "diagnostics"]
+center = ["spinner", "file-type", "diagnostics"]
 right = [
   "position",
   "position-percentage",
