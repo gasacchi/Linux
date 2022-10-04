@@ -1,44 +1,82 @@
-# Syntax highlighting
-# -------------------
-"type" = "yellow"
-"type.enum.variant" = "peach"
+# catppuccin color scheme
+# modified to manualy update the theme
 
+# Class attributes, html tag attributes
+"attribute" = "teal"
+
+# Type
+"type" = "yellow"
+"type.builtin" = { fg = "yellow", modifiers = ["italic"]}
+
+# Constructor
 "constructor" = "sapphire"
 
+# constant
 "constant" = "peach"
+"constant.builtin" = { fg = "peach", modifiers = ["bold"]}
 "constant.character" = "teal"
 "constant.character.escape" = "pink"
+"constant.numeric" = "peach"
 
+# String
 "string" = "green"
 "string.regexp" = "peach"
-"string.special" = "pink"
+"string.special.path" = { fg = "blue", modifiers = ["underline"]}
+"string.special.url" = { fg = "rosewater", modifiers = ["italic", "underline"]}
+"string.special.symbol" = "flamingo"
 
+# Comment
 "comment" = { fg = "overlay1", modifiers = ["italic"] }
+"comment.line" = { fg = "overlay1", modifiers = ["italic"] }
+"comment.block" = { fg = "overlay1", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "overlay1", modifiers = ["bold", "italic"] }
 
+# Variable
 "variable" = "text"
-"variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
 "variable.builtin" = "red"
+"variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
 "variable.other.member" = "teal"
 
+# Label
 "label" = "sapphire" # used for lifetimes
 
-"punctuation" = "peach"
+# Punctuation
+"punctuation" = "overlay2"
+"punctuation.delimiter" = "sky"
+"punctuation.bracket" = "pink"
+"punctuation.special" = "flamingo"
 
+# Keyword
+# TODO: hello
 "keyword" = "mauve"
 "keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.control.repeat" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.control.import" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.control.return" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.control.exception" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.operator" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.directive" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.function" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.storage.type" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.storage.modifier" = { fg = "mauve", modifiers = ["italic"] }
 
+# Operator
 "operator" = "sky"
 
+# Function
 "function" = "blue"
 "function.builtin" = "peach"
+"function.method" = "blue"
 "function.macro" = "teal"
+"function.special" = "sky"
 
+# Tag
 "tag" = "mauve"
 
+# Namespace
 "namespace" = { fg = "blue", modifiers = ["italic"] }
 
-"special" = "blue" # fuzzy highlight
-
+# Markup
 "markup.heading.marker" = { fg = "peach", modifiers = ["bold"] }
 "markup.heading.1" = "lavender"
 "markup.heading.2" = "mauve"
@@ -46,61 +84,104 @@
 "markup.heading.4" = "yellow"
 "markup.heading.5" = "pink"
 "markup.heading.6" = "teal"
-"markup.list" = "mauve"
+"markup.list.unnumbered" = "mauve"
+"markup.list.numbered" = "mauve"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
 "markup.link.url" = { fg = "peach", modifiers = ["underlined"] }
+"markup.link.label" = "blue"
 "markup.link.text" = "blue"
-"markup.raw" = "flamingo"
+"markup.quote" = "blue"
+"markup.raw.inline" = "flamingo"
+"markup.raw.block" = "flamingo"
 
+# Diff
 "diff.plus" = "green"
 "diff.minus" = "red"
 "diff.delta" = "yellow"
+"diff.delta.moved" = "red"
 
-# User Interface
-# --------------
+# Markup
+# TODO: ?
+
+# User Interface -------------------------------------------------------------
 # "ui.background" = { fg = "text", bg = "base" }
+# Transparent Background
 "ui.background" = { fg = "text" }
+"ui.background.separator" = { fg = "text"}
 
+# Cursor
+"ui.cursor" = { fg = "base", bg = "red" }
+"ui.cursor.insert" = { fg = "base", bg = "green" }
+"ui.cursor.select" = { fg = "base", bg = "flamingo" }
+"ui.cursor.primary" = { fg = "base", bg = "red" }
+"ui.cursor.match" = { fg = "base", bg= "overlay1", modifiers = ["bold", "slow_blink"] }
+
+# Gutter
+"ui.gutter" = "red"
+"ui.gutter.selected" = "blue"
+
+# Line number
 "ui.linenr" = { fg = "surface1" }
 "ui.linenr.selected" = { fg = "lavender" }
 
+# Statusline
 "ui.statusline" = { fg = "overlay1", bg = "surface0" }
 "ui.statusline.inactive" = { fg = "overlay1", bg = "mantle" }
 "ui.statusline.normal" = { fg = "surface0", bg = "lavender", modifiers = ["bold"] }
 "ui.statusline.insert" = { fg = "surface0", bg = "green", modifiers = ["bold"]  }
 "ui.statusline.select" = { fg = "surface0", bg = "flamingo", modifiers = ["bold"]  }
+# bug on config [editor.statusline.seperator] not work
+"ui.statusline.separator" = { fg = "red", bg = "blue"}
 
+# Popup
 "ui.popup" = { fg = "text", bg = "surface0" }
+"ui.popup.info" = { fg = "text", bg = "surface0" }
+
+# Border split window
 "ui.window" = { fg = "crust" }
+# help description box
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
+# Text
 "ui.text" = "text" 
 "ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
+"ui.text.info" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
 
+# Virtual
 "ui.virtual" = "overlay0"
-"ui.virtual.ruler" = { bg = "surface0" }
-"ui.virtual.indent-guide" = "surface0"
+"ui.virtual.ruler" = { fg = "red", bg = "surface0", modifiers = ["bold", "slow_blink"] }
+"ui.virtual.whitespace" = { fg = "surface2"}
+"ui.virtual.indent-guide" = { fg = "overlay0", modifiers = ["dim"]}
 
-"ui.selection" = { bg = "surface1" }
-
-"ui.cursor" = { fg = "base", bg = "secondary_cursor" }
-"ui.cursor.primary" = { fg = "base", bg = "rosewater" }
-"ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
-
-"ui.cursorline.primary" = { bg = "cursorline" }
-
-"ui.highlight" = { bg = "surface1" }
-
+# Menu completion
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "surface2", bg = "surface1", modifiers = ["bold"] }
 
-diagnostic = { modifiers = ["underlined"] }
+# Selection
+"ui.selection" = { bg = "surface1" }
+"ui.selection.primary" = { bg = "surface1" }
 
+# Cursorline
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.cursorline.secondary" = { bg = "cursorline", modifiers = ["dim"] }
+
+# Diagnostics
 error = "red"
 warning = "yellow"
 info = "sky"
 hint = "teal"
+
+diagnostic = { modifiers = ["underlined"] }
+"diagnostic.hint" = { fg = "teal",  modifiers = ["underline"]}
+"diagnostic.info" = { fg = "sky",  modifiers = ["underline"]}
+"diagnostic.warning" = { fg = "yellow", modifiers = ["slow_blink", "bold"]}
+"diagnostic.error" = { fg = "red", modifiers = ["slow_blink", "bold", "crossed_out"]}
+
+# Unknown
+"ui.highlight" = { bg = "surface1" }
+"special" = "blue" # fuzzy highlight
 
 [palette]
 # catppuccin palette colors
