@@ -1,11 +1,11 @@
-# -----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # Editor Configurations
-# -----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 
-# Theme -----------------------------------------------------------------------
+# Theme ----------------------------------------------------------------------
 theme="catppuccin_mocha_fix"
 
-# Editor ----------------------------------------------------------------------
+# Editor ---------------------------------------------------------------------
 [editor]
 scrolloff = 5
 mouse = true
@@ -14,7 +14,7 @@ scroll-lines = 5
 shell = ["nu", "-c"]
 line-number = "relative"
 cursorline = true
-gutters = ["line-numbers", "spacer", "diagnostics"]
+gutters = ["spacer", "diagnostics"]
 auto-completion = true
 auto-format = true
 idle-timeout = 0
@@ -26,7 +26,7 @@ bufferline = "always"
 color-modes = true
 
 
-# Statusline ------------------------------------------------------------------
+# Statusline -----------------------------------------------------------------
 [editor.statusline]
 left = ["mode", "file-name", "selections"]
 center = ["spinner", "file-type", "diagnostics"]
@@ -98,14 +98,94 @@ skip-levels = 0
 
 # -----------------------------------------------------------------------------
 # Keymaps
+# Rebindings for decumentation purpose
 #------------------------------------------------------------------------------
 
 # Normal
 [keys.normal]
+# Movement
+h = "move_char_left"
+l = "move_char_right"
+j = "move_line_down"
+k = "move_line_up"
+w = "move_next_word_start"
+e = "move_next_word_end"
+b = "move_prev_word_start"
+W = "move_next_long_word_start"
+B = "move_prev_long_word_start"
+E = "move_next_long_word_end"
+t = "find_till_char"
+f = "find_next_char"
+T = "till_prev_char"
+F = "find_prev_char"
+G = "goto_line"
+"C-f" = "page_down"
+"C-b" = "page_up"
+"C-u" = "half_page_up"
+"C-d" = "half_page_down"
+# "C-j" = "page_up"
+
+# Changes
+r = "replace"
+R = "replace_with_yanked"
+"~" = "switch_case"
+i = "insert_mode"
+I = "insert_at_line_start"
+a = "append_mode"
+A = "insert_at_line_end"
+o = "open_below"
+O = "open_above"
+u = "undo"
+U = "redo"
+y = "yank"
+p = "paste_after"
+P = "paste_before"
+">" = "indent"
+"<" = "unindent"
+# "=" = "format_selections" currently not functional
+d = "delete_selection"
+"A-d" = "delete_selection_noyank"
+c = "change_selection"
+"A-c" = "change_selection_noyank"
+"C-a" = "increment"
+"C-x" = "decrement"
+
+# Selection Manipulation
+s = "select_regex"
+S = "split_selection"
+"C-c" = "collapse_selections"
+
+
+# TODO:
+# - ( ) rotate primary selection
+# - Alt-: ensure selection forward
+# - Alt-; flip selection
+# - & align selection
+# - _ trim selection
+# - jump list CTRL-s
+# - ~ toggle char case
+# - A-u move history
+# - " register
+# - Q macro
+# - | shell pipe, shell input
+# - s selection
+
+
+
+# rebind to no_op
+home = "no_op"
+end = "no_op"
+left = "no_op"
+right = "no_op"
+up = "no_op"
+down = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+"`" = "no_op"
+"A-`" = "no_op"
 "C-w" = "no_op"
 "["   = "no_op"
 "]"   = "no_op"
-"C-c" = "normal_mode"
 
 [keys.normal.g]
 d = "no_op"
@@ -162,7 +242,7 @@ d = ":buffer-close"
 D = ":buffer-close-others"
 x = ":buffer-close-all"
 
-# Editor ----------------------------------------------------------------------
+# Editor ---------------------------------------------------------------------
 [keys.normal."space".e]
 "." = ":show-directory"
 l   = ":log-open"
@@ -173,7 +253,7 @@ P   = "paste_clipboard_before"
 y   = "yank_joined_to_clipboard"
 Y   = "yank_main_selection_to_clipboard"
 
-# File ------------------------------------------------------------------------
+# File -----------------------------------------------------------------------
 [keys.normal."space".f]
 f = "file_picker_in_current_directory"
 F = "file_picker"
