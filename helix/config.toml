@@ -7,23 +7,79 @@ theme="catppuccin_mocha_fix"
 
 # Editor ----------------------------------------------------------------------
 [editor]
+scrolloff = 5
 mouse = true
-line-number = "relative"
-rulers = [80,]
+middle-click-paste = true
+scroll-lines = 5
 shell = ["nu", "-c"]
-gutters = ["diagnostics","line-numbers"]
+line-number = "relative"
+cursorline = true
+gutters = ["line-numbers", "spacer", "diagnostics"]
+auto-completion = true
+auto-format = true
 idle-timeout = 0
-true-color = true
+completion-trigger-len = 1
+auto-info = true
+true-color = false
+rulers = [80,]
+bufferline = "always"
+color-modes = true
+
+
+# Statusline ------------------------------------------------------------------
+[editor.statusline]
+left = ["mode", "file-name", "selections"]
+center = ["file-type", "spinner", "diagnostics"]
+right = [
+  "position",
+  "position-percentage",
+  "total-line-numbers",
+  "file-encoding",
+  "file-line-ending"
+]
+# bug not change the separator
+separator = "│"
+mode.normal = "Normal"
+mode.insert = "Insert"
+mode.select = "Select"
 
 # LSP -------------------------------------------------------------------------
 [editor.lsp]
 display-messages = true
+auto-signature-help = true
+display-signature-help-docs = true
 
 # Cursor ----------------------------------------------------------------------
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+# File picker -----------------------------------------------------------------
+[editor.file-picker]
+hidden = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+max-depth = 3
+
+# Default auto-pairs can be overdrives by [[language]] ------------------------
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+"'" = "'"
+
+# Search ----------------------------------------------------------------------
+[editor.search]
+smart-case = true
+wrap-around = true
+
 
 # Whitespace Render -----------------------------------------------------------
 [editor.whitespace]
@@ -34,6 +90,11 @@ space = "·"
 nbsp = "⍽"
 tab = "→"
 newline = "⏎"
+
+[editor.indent-guides]
+render = true
+character = "│"
+skip-levels = 0
 
 # -----------------------------------------------------------------------------
 # Keymaps
