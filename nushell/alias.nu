@@ -2,7 +2,7 @@
 alias ll = ls -l
 alias lla = ls -la
 alias la = ls -a
-alias e = helix
+alias e = hx
 alias p = pnpm
 alias pi = pnpm install
 alias pd = pnpm install -D

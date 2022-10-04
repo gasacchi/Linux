@@ -3,7 +3,7 @@
 let local_bin = '~/.local/bin'
 let workspace_bin = '~/Dev/github/Linux/bin'
 
-let-env EDITOR = "helix"
+let-env EDITOR = "hx"
 let-env BAT_THEME = "Catppuccin-mocha"
 let-env PNPM_HOME = "/home/gasacchi/.local/share/pnpm"
 let-env RUST_PATH = "~/.cargo/bin"
