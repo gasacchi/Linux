@@ -3,34 +3,34 @@
 # ----------------------------------------------------------------------------
 
 # Theme ----------------------------------------------------------------------
-theme="catppuccin_mocha_fix"
+theme                       = "catppuccin_mocha_fix"
 
 # Editor ---------------------------------------------------------------------
 [editor]
-scrolloff = 5
-mouse = true
-middle-click-paste = true
-scroll-lines = 5
-shell = ["nu", "-c"]
-line-number = "relative"
-cursorline = true
-gutters = ["spacer", "diagnostics"]
-auto-completion = true
-auto-format = true
-idle-timeout = 0
-completion-trigger-len = 1
-auto-info = true
-true-color = false
-rulers = [80,]
-bufferline = "always"
-color-modes = true
+scrolloff                   = 5
+mouse                       = true
+middle-click-paste          = true
+scroll-lines                = 5
+shell                       = ["nu", "-c"]
+line-number                 = "relative"
+cursorline                  = true
+gutters                     = ["spacer", "diagnostics"]
+auto-completion             = true
+auto-format                 = true
+idle-timeout                = 0
+completion-trigger-len      = 1
+auto-info                   = true
+true-color                  = false
+rulers                      = [80,]
+bufferline                  = "always"
+color-modes                 = true
 
 
 # Statusline -----------------------------------------------------------------
 [editor.statusline]
-left = ["mode", "file-name", "selections"]
-center = ["spinner", "file-type", "diagnostics"]
-right = [
+left                        = ["mode", "file-name", "selections"]
+center                      = ["spinner", "file-type", "diagnostics"]
+right                       = [
   "position",
   "position-percentage",
   "total-line-numbers",
@@ -38,63 +38,63 @@ right = [
   "file-line-ending"
 ]
 # bug not change the separator
-separator = "│"
-mode.normal = "Normal"
-mode.insert = "Insert"
-mode.select = "Select"
+separator                   = "│"
+mode.normal                 = "Normal"
+mode.insert                 = "Insert"
+mode.select                 = "Select"
 
 # LSP -------------------------------------------------------------------------
 [editor.lsp]
-display-messages = true
-auto-signature-help = true
+display-messages            = true
+auto-signature-help         = true
 display-signature-help-docs = true
 
 # Cursor ----------------------------------------------------------------------
 [editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+insert                      = "bar"
+normal                      = "block"
+select                      = "underline"
 
 # File picker -----------------------------------------------------------------
 [editor.file-picker]
-hidden = true
-parents = true
-ignore = true
-git-ignore = true
-git-global = true
-git-exclude = true
-max-depth = 3
+hidden                      = true
+parents                     = true
+ignore                      = true
+git-ignore                  = true
+git-global                  = true
+git-exclude                 = true
+max-depth                   = 3
 
 # Default auto-pairs can be overdrives by [[language]] ------------------------
 [editor.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
-'<' = '>'
-"'" = "'"
+'('                         = ')'
+'{'                         = '}'
+'['                         = ']'
+'"'                         = '"'
+'`'                         = '`'
+'<'                         = '>'
+"'"                         = "'"
 
 # Search ----------------------------------------------------------------------
 [editor.search]
-smart-case = true
-wrap-around = true
+smart-case                  = true
+wrap-around                 = true
 
 
 # Whitespace Render -----------------------------------------------------------
 [editor.whitespace]
-render = "all"
+render                      = "all"
 
 [editor.whitespace.characters]
-space = "·"
-nbsp = "⍽"
-tab = "→"
-newline = "⏎"
+space                       = "·"
+nbsp                        = "⍽"
+tab                         = "→"
+newline                     = "⏎"
 
 [editor.indent-guides]
-render = true
-character = "│"
-skip-levels = 0
+render                      = true
+character                   = "│"
+skip-levels                 = 0
 
 # -----------------------------------------------------------------------------
 # Keymaps
@@ -104,212 +104,251 @@ skip-levels = 0
 # Normal
 [keys.normal]
 # Movement
-h = "move_char_left"
-l = "move_char_right"
-j = "move_line_down"
-k = "move_line_up"
-w = "move_next_word_start"
-e = "move_next_word_end"
-b = "move_prev_word_start"
-W = "move_next_long_word_start"
-B = "move_prev_long_word_start"
-E = "move_next_long_word_end"
-t = "find_till_char"
-f = "find_next_char"
-T = "till_prev_char"
-F = "find_prev_char"
-G = "goto_line"
-"C-f" = "page_down"
-"C-b" = "page_up"
-"C-u" = "half_page_up"
-"C-d" = "half_page_down"
-# "C-j" = "page_up"
+h                           = "move_char_left"
+left                        = "no_op"
+l                           = "move_char_right"
+right                       = "no_op"
+j                           = "move_line_down"
+down                        = "no_op"
+k                           = "move_line_up"
+up                          = "no_op"
+w                           = "move_next_word_start"
+e                           = "move_next_word_end"
+b                           = "move_prev_word_start"
+W                           = "move_next_long_word_start"
+B                           = "move_prev_long_word_start"
+E                           = "move_next_long_word_end"
+t                           = "find_till_char"
+f                           = "find_next_char"
+T                           = "till_prev_char"
+F                           = "find_prev_char"
+G                           = "goto_line"
+";"                         = "repeat_last_motion"
+"A-."                       = "no_op"
+"C-f"                       = "page_down"
+pagedown                    = "no_op"
+"C-b"                       = "page_up"
+pageup                      = "no_op"
+"C-u"                       = "half_page_up"
+"C-d"                       = "half_page_down"
+"C-h"                       = "jump_backward"
+"C-l"                       = "jump_forward"
 
 # Changes
-r = "replace"
-R = "replace_with_yanked"
-"~" = "switch_case"
-i = "insert_mode"
-I = "insert_at_line_start"
-a = "append_mode"
-A = "insert_at_line_end"
-o = "open_below"
-O = "open_above"
-u = "undo"
-U = "redo"
-y = "yank"
-p = "paste_after"
-P = "paste_before"
-">" = "indent"
-"<" = "unindent"
-# "=" = "format_selections" currently not functional
-d = "delete_selection"
-"A-d" = "delete_selection_noyank"
-c = "change_selection"
-"A-c" = "change_selection_noyank"
-"C-a" = "increment"
-"C-x" = "decrement"
+r                           = "replace"
+R                           = "replace_with_yanked"
+"~"                         = "switch_case"
+"`"                         = "no_op"
+"A-`"                       = "no_op"
+i                           = "insert_mode"
+I                           = "insert_at_line_start"
+a                           = "append_mode"
+A                           = "insert_at_line_end"
+o                           = "open_below"
+O                           = "open_above"
+u                           = "undo"
+U                           = "redo"
+y                           = "yank"
+p                           = "paste_after"
+P                           = "paste_before"
+'"'                         = "select_register"
+">"                         = "indent"
+"<"                         = "unindent"
+# "                         =" = "format_selections" currently not functional
+d                           = "delete_selection"
+"A-d"                       = "delete_selection_noyank"
+c                           = "change_selection"
+"A-c"                       = "change_selection_noyank"
+"C-a"                       = "increment"
+"C-x"                       = "decrement"
+"q"                         = "replay_macro"
+"Q"                         = "record_macro"
+
+# Change default no_op
+"A-u"                       = "no_op" # move backward history
+"A-U"                       = "no_op" # move farward history
+
+# SHELL
+# TODO: mappings
+
 
 # Selection Manipulation
-s = "select_regex"
-S = "split_selection"
-"C-c" = "collapse_selections"
+s                           = "select_regex"
+S                           = "split_selection"
+"A-s"                       = "split_selection_on_newline"
+"C-c"                       = "collapse_selection" # ; used by repeat_motion
+"A-:"                       = "ensure_selections_forward"
+"&"                         = "align_selections"
+"_"                         = "trim_selections"
+"'"                         = "flip_selections"
+"A-,"                       = "no_op"
+"C"                         = "copy_selection_on_next_line"
+"A-C"                       = "copy_selection_on_prev_line"
+"("                         = "rotate_selections_backward"
+")"                         = "rotate_selections_forward"
+"A-("                       = "rotate_selection_contents_backward"
+"A-)"                       = "rotate_selection_contents_forward"
+"%"                         = "select_all"
+x                           = "extend_line_below"
+X                           = "extend_to_line_bounds"
+"A-x"                       = "shrink_to_line_bounds"
+J                           = "join_selections"
+K                           = "keep_selections"
+"A-K"                       = "remove_selections"
+"C-o"                       = "expand_selection"
+"A-up"                      = "no_op"
+"C-i"                       = "shrink_selection"
+"A-down"                    = "no_op"
+"C-p"                       = "select_prev_sibling"
+"A-left"                    = "no_op"
+"C-n"                       = "select_next_sibling"
+"A-right"                   = "no_op"
 
 
-# TODO:
-# - ( ) rotate primary selection
-# - Alt-: ensure selection forward
-# - Alt-; flip selection
-# - & align selection
-# - _ trim selection
-# - jump list CTRL-s
-# - ~ toggle char case
-# - A-u move history
-# - " register
-# - Q macro
-# - | shell pipe, shell input
-# - s selection
+# Search
+"/"                         = "search"
+"?"                         = "rsearch"
+"n"                         = "search_next"
+"N"                         = "search_prev"
+"*"                         = "search_selection"
 
+# default normal mode no_op
+home                        = "no_op"
+end                         = "no_op"
+"C-w"                       = "no_op"
+"["                         = "no_op"
+"]"                         = "no_op"
 
-
-# rebind to no_op
-home = "no_op"
-end = "no_op"
-left = "no_op"
-right = "no_op"
-up = "no_op"
-down = "no_op"
-pageup = "no_op"
-pagedown = "no_op"
-"`" = "no_op"
-"A-`" = "no_op"
-"C-w" = "no_op"
-"["   = "no_op"
-"]"   = "no_op"
 
 [keys.normal.g]
-d = "no_op"
-y = "no_op"
-r = "no_op"
-i = "no_op"
-n = "no_op"
-p = "no_op"
+d                           = "no_op"
+y                           = "no_op"
+r                           = "no_op"
+i                           = "no_op"
+n                           = "no_op"
+p                           = "no_op"
 
 # Match and Move
 [keys.normal.m]
-f   = "goto_next_function"
-F   = "goto_prev_function"
-c   = "goto_next_class"
-C   = "goto_prev_class"
-p   = "goto_next_parameter"
-P   = "goto_prev_parameter"
-x   = "goto_next_comment"
-X   = "goto_prev_comment"
-"." = "goto_next_paragraph"
-"," = "goto_prev_paragraph"
-o   = "add_newline_below"
-O   = "add_newline_above"
+f                           = "goto_next_function"
+F                           = "goto_prev_function"
+c                           = "goto_next_class"
+C                           = "goto_prev_class"
+p                           = "goto_next_parameter"
+P                           = "goto_prev_parameter"
+x                           = "goto_next_comment"
+X                           = "goto_prev_comment"
+"."                         = "goto_next_paragraph"
+","                         = "goto_prev_paragraph"
+o                           = "add_newline_below"
+O                           = "add_newline_above"
 
 # Normal Space Mode -----------------------------------------------------------
 [keys.normal."space"]
-"." = "file_picker_in_current_directory"
-"," = "global_search"
-c   = "command_mode"
-C   = "command_palette"
-q   = ":quit" 
-Q   = ":quit!"
-F   = "no_op"
-h   = "no_op"
-p   = "no_op"
-P   = "no_op"
-y   = "no_op"
-Y   = "no_op"
-k   = "no_op"
-s   = "no_op"
-S   = "no_op"
-a   = "no_op"
-r   = "no_op"
-R   = "no_op"
-"/" = "toggle_comments"
-"?" = "no_op"
+"."                         = "file_picker_in_current_directory"
+","                         = "global_search"
+c                           = "command_mode"
+C                           = "command_palette"
+q                           = ":quit" 
+Q                           = ":quit!"
+F                           = "no_op"
+h                           = "no_op"
+p                           = "no_op"
+P                           = "no_op"
+y                           = "no_op"
+Y                           = "no_op"
+k                           = "no_op"
+s                           = "no_op"
+S                           = "no_op"
+a                           = "no_op"
+r                           = "no_op"
+d                           = "no_op"
+g                           = "no_op"
+G                           = "no_op"
+R                           = "no_op"
+"/"                         = "toggle_comments"
+"?"                         = "no_op"
+
 
 # Buffer ----------------------------------------------------------------------
 [keys.normal."space".b]
-b = "buffer_picker"
-n = "goto_next_buffer"
-p = "goto_previous_buffer"
-d = ":buffer-close"
-D = ":buffer-close-others"
-x = ":buffer-close-all"
+b                           = "buffer_picker"
+n                           = "goto_next_buffer"
+p                           = "goto_previous_buffer"
+d                           = ":buffer-close"
+D                           = ":buffer-close-others"
+x                           = ":buffer-close-all"
 
 # Editor ---------------------------------------------------------------------
 [keys.normal."space".e]
-"." = ":show-directory"
-l   = ":log-open"
-r   = ":config-reload"
-R   = "replace_selections_with_clipboard"
-p   = "paste_clipboard_after"
-P   = "paste_clipboard_before"
-y   = "yank_joined_to_clipboard"
-Y   = "yank_main_selection_to_clipboard"
+"."                         = ":show-directory"
+l                           = ":log-open"
+r                           = ":config-reload"
+R                           = "replace_selections_with_clipboard"
+p                           = "paste_clipboard_after"
+P                           = "paste_clipboard_before"
+y                           = "yank_joined_to_clipboard"
+Y                           = "yank_main_selection_to_clipboard"
 
 # File -----------------------------------------------------------------------
 [keys.normal."space".f]
-f = "file_picker_in_current_directory"
-F = "file_picker"
-n = ":new"
-s = ":write"
-S = ":write-quit"
-r = ":reload"
+f                           = "file_picker_in_current_directory"
+F                           = "file_picker"
+n                           = ":new"
+s                           = ":write"
+S                           = ":write-quit"
+r                           = ":reload"
 
 # LSP
 [keys.normal."space".l]
-"." = ":format"
-a   = "code_action"
-d   = "goto_definition"
-t   = "goto_type_definition"
-r   = "goto_reference"
-R   = "rename_symbol"
-i   = "goto_implementation"
-h   = "hover"
-s   = "symbol_picker"
-S   = "workspace_symbol_picker"
-p   = "goto_prev_diag"
-n   = "goto_next_diag"
-f   = "goto_first_diag"
-l   = "goto_last_diag"
+"."                         = ":format"
+a                           = "code_action"
+d                           = "goto_definition"
+t                           = "goto_type_definition"
+r                           = "goto_reference"
+R                           = "rename_symbol"
+i                           = "goto_implementation"
+h                           = "hover"
+s                           = "symbol_picker"
+S                           = "workspace_symbol_picker"
+p                           = "goto_prev_diag"
+n                           = "goto_next_diag"
+f                           = "goto_first_diag"
+l                           = "goto_last_diag"
+g                           = "diagnostics_picker"
+G                           = "workspace_diagnostics_picker"
 
 # Open 
 [keys.normal."space".o]
-b = ":open ~/.config/broot/conf.toml"
-c = ":config-open"
-e = ":open ~/.config/nushell/env.nu"
-g = ":open ~/.config/gitui/key_bindings.ron"
-k = ":open ~/.config/kitty/kitty.conf"
-n = ":open ~/.config/nushell/config.nu"
-s = ":open ~/.config/starship/starship.toml"
-t = ":open "
-z = ":open ~/.config/zellij/config.yaml"
+b                           = ":open ~/.config/broot/conf.toml"
+c                           = ":config-open"
+e                           = ":open ~/.config/nushell/env.nu"
+g                           = ":open ~/.config/gitui/key_bindings.ron"
+k                           = ":open ~/.config/kitty/kitty.conf"
+n                           = ":open ~/.config/nushell/config.nu"
+s                           = ":open ~/.config/starship/starship.toml"
+t                           = ":open "
+z                           = ":open ~/.config/zellij/config.yaml"
 
 # Window ----------------------------------------------------------------------
 [keys.normal."space".w]
-w = "no_op"
-C-w = "no_op"
-q = "no_op"
-C-q = "no_op"
-o = "no_op"
-C-o = "no_op"
-n = "rotate_view"
-S = "hsplit_new"
-V = "vsplit_new"
-d = "wclose"
-D = "wonly"
+w                           = "no_op"
+C-w                         = "no_op"
+q                           = "no_op"
+C-q                         = "no_op"
+o                           = "no_op"
+C-o                         = "no_op"
+n                           = "rotate_view"
+S                           = "hsplit_new"
+V                           = "vsplit_new"
+d                           = "wclose"
+D                           = "wonly"
 
 # Insert Mode -----------------------------------------------------------------
 [keys.insert]
-"C-c" = "normal_mode"
-j = {  k = "normal_mode" }
+"C-c"                       = "normal_mode"
+j                           = {  k = "normal_mode" }
 
 # Select Mode -----------------------------------------------------------------
 [keys.select]
-"C-c" = "normal_mode"
+"C-c"                       = "normal_mode"
