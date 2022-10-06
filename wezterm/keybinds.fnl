@@ -87,7 +87,7 @@
   [{:key :g
     :mods :LEADER
     :action (a.SpawnCommandInNewTab {:args [:nu
-                                           (.. scripts-dir :gitui.nu)]})}
+                                           (.. scripts-dir :lazygit.nu)]})}
    {:key :B
     :mods :LEADER|SHIFT
     :action (a.SpawnCommandInNewTab {:args [:btm]})}
