@@ -16,7 +16,7 @@ alias ln = ln -v
 
 ## CLI Tools Aliases
 alias cat = bat
-alias g = lazygit
+alias g = gitui
 alias du = dust
 
 ## Git alias
