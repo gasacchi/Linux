@@ -176,7 +176,7 @@ hint = "teal"
 diagnostic = { modifiers = ["underlined"] }
 "diagnostic.hint" = { fg = "teal",  modifiers = ["underline"]}
 "diagnostic.info" = { fg = "sky",  modifiers = ["underline"]}
-"diagnostic.warning" = { fg = "yellow", modifiers = ["slow_blink", "bold"]}
+"diagnostic.warning" = { fg = "yellow", modifiers = ["crossed_out", "bold"]}
 "diagnostic.error" = { fg = "red", modifiers = ["slow_blink", "bold", "crossed_out"]}
 
 # Unknown
