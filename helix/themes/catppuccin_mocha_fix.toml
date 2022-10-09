@@ -43,7 +43,7 @@
 # Punctuation
 "punctuation" = "overlay2"
 "punctuation.delimiter" = "sky"
-"punctuation.bracket" = "pink"
+"punctuation.bracket" = "overlay0"
 "punctuation.special" = "flamingo"
 
 # Keyword
