@@ -3,6 +3,8 @@
 let local_bin = '~/.local/bin'
 let workspace_bin = '~/Dev/github/Linux/bin'
 
+let-env LUA_PATH = '/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib/lua/5.4/?.lua;/usr/lib/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/gasacchi/.luarocks/share/lua/5.4/?.lua;/home/gasacchi/.luarocks/share/lua/5.4/?/init.lua'
+let-env LUA_CPATH = '/usr/lib/lua/5.4/?.so;/usr/lib/lua/5.4/loadall.so;./?.so;/home/gasacchi/.luarocks/lib/lua/5.4/?.so'
 let-env EDITOR = "hx"
 let-env BAT_THEME = "Catppuccin-mocha"
 let-env PNPM_HOME = "/home/gasacchi/.local/share/pnpm"
