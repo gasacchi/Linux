@@ -19,9 +19,10 @@
  : keys
  :key_tables key-tables
  :color_scheme "Catppuccin Mocha"
+ :foreground_text_hsb {:hue 1.0 :saturation 1.0 :brightness 0.5}
  :inactive_pane_hsb {:saturation 0.9 :brightness 0.3}
  :font_size 9
- :font (wez.font_with_fallback ["JetBrainsMono Nerd Font"
+ :font (wez.font_with_fallback ["BigBlue_TerminalPlus Nerd Font"
                                 "Broot Icons Visual Studio Code"])
  :warn_about_missing_glyphs false
  :scrollback_lines 3000
