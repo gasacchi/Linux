@@ -50,4 +50,4 @@ let-env NU_PLUGIN_DIRS = [
 
 
 mkdir ~/.cache/starship
-starship init nu | save ~/.cache/starship/init.nu
+# starship init nu | save ~/.cache/starship/init.nu
