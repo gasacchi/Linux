@@ -19,7 +19,7 @@ alias ln="ln -v"
 alias j="br"
 
 alias cat=bat
-alias g=gitui
+alias g="gitui -t catppuccin.ron"
 alias du=dust
 alias ping=gping
 alias top='btm'

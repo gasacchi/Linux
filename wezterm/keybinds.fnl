@@ -86,8 +86,9 @@
 (local external
   [{:key :g
     :mods :LEADER
-    :action (a.SpawnCommandInNewTab {:args [:fish
-                                           (.. scripts-dir :gitui.fish)]})}
+    :action (a.SpawnCommandInNewTab {:args 
+                                      [:fish 
+                                       (.. scripts-dir "gitui.fish")]})}
    {:key :B
     :mods :LEADER|SHIFT
     :action (a.SpawnCommandInNewTab {:args [:btm]})}
