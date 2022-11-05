@@ -86,8 +86,8 @@
 (local external
   [{:key :g
     :mods :LEADER
-    :action (a.SpawnCommandInNewTab {:args [:nu
-                                           (.. scripts-dir :gitui.nu)]})}
+    :action (a.SpawnCommandInNewTab {:args [:fish
+                                           (.. scripts-dir :gitui.fish)]})}
    {:key :B
     :mods :LEADER|SHIFT
     :action (a.SpawnCommandInNewTab {:args [:btm]})}
@@ -97,9 +97,9 @@
    {:key :C
     :mods :LEADER
     :action (a.SpawnCommandInNewTab {:args 
-                                      [:nu
+                                      [:fish
                                        :-c
-                                       "helix ~/Dev/github/Stuff/todos/TODO.md"]})}])
+                                       "hx ~/Dev/github/Stuff/todos/TODO.md"]})}])
 
 (local keybinds [])
 (local keys [basic activate-key-tables tab pane external])

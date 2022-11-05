@@ -21,7 +21,7 @@
  :color_scheme "Catppuccin Mocha"
  :foreground_text_hsb {:hue 1.0 :saturation 1.0 :brightness 0.5}
  :inactive_pane_hsb {:saturation 0.9 :brightness 0.3}
- :font_size 9
+ :font_size 10
  :font (wez.font_with_fallback ["BigBlue_TerminalPlus Nerd Font"
                                 "Broot Icons Visual Studio Code"])
  :warn_about_missing_glyphs false

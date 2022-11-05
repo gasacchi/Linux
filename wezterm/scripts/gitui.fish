@@ -1,3 +1,3 @@
 # Temporary fixing gitui not running when using SpawnCommandInNewTab(Wezterm)
-let-env EDITOR = "hx"
-^gitui
+set -gx EDITOR "hx"
+gitui

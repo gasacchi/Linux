@@ -13,7 +13,7 @@
 (fn split-pane-with-cmd [window pane cmd direction size]
   (window:perform_action
     (a.SplitPane {: direction
-                     :command {:args [:nu :-l :-e cmd ]}
+                     :command {:args [:fish :-c cmd ]}
                      :size {:Percent size}}) 
     pane))
 
@@ -111,7 +111,7 @@
       [(a.ActivatePaneByIndex 0) 
        (a.SplitPane {:direction :Left 
                      :size {:Percent 20} 
-                     :command {:args [:nu :-c :broot]}})])
+                     :command {:args [:fish :-c :broot]}})])
     pane))
 
 
@@ -148,7 +148,7 @@
     (do
       (window:perform_action 
         (a.Multiple 
-          [(a.SpawnCommandInNewTab {:args [:nu :-c cmd]})])
+          [(a.SpawnCommandInNewTab {:args [:fish :-c cmd]})])
         pane))))
 
 
