@@ -41,9 +41,9 @@ set -gx PATH "$HOME/.local/bin:$PATH"
 # rust path
 set -gx PATH "$HOME/.cargo/bin:$PATH"
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
+# if status is-interactive
+#     # Commands to run in interactive sessions can go here
+# end
 
 
 starship init fish | source
