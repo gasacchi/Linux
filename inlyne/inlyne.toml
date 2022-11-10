@@ -1,0 +1,83 @@
+# # A different scale factor can be specified
+# # Default: The window's scale factor (system dependent)
+scale = 1.0
+
+# # The theme can be set as well
+# # Default: "Light"
+# # Possible values: ["Light", "Dark"]
+theme = "Dark"
+
+# # Number of lines to scroll when using a line-based scrolling device (a lot of
+# # mice)
+# # Default: 3.0
+# lines-to-scroll = 4.5
+
+# # The light and dark themes can be customized as well
+# # Here is a dark theme inspired by GitHub's dark dimmed theme
+[dark-theme]
+# # Regular text color
+text-color = 0x7f849c
+# # Background canvas color
+background-color = 0x1e1e2e
+# # Inline code text color
+code-color = 0xb4befe
+# # Code block background color
+code-block-color = 0x181825
+# # Quote block background color
+quote-block-color = 0x313244
+# # Hyperlink text color
+link-color = 0xf5e0dc
+# # Text selection color
+select-color = 0x585b70
+# # Checkbox ticked background color
+checkbox-color = 0xcba6f7
+# # Syntax highlighting theme. All of `syntect`s default themes are supported
+# # Possible values: [
+# #     "base16-ocean-dark",  "base16-eighties-dark", "base16-mocha-dark",
+# #     "base16-ocean-light", "inspired-github",      "solarized-dark",
+# #     "solarized-light"
+# # ]
+# # Default: "base16-ocean-dark"
+code-highlighter = "base16-eighties-dark"
+
+# # Change the appearance of text with font options
+[font-options]
+# # Name of font for regular text
+regular-font = "BigBlue_TerminalPlus Nerd Font"
+# # Name of font for monospace text such as code
+monospace-font = "JetBrainsMono Nerd Font"
+
+# # Possible Modifiers: ["Alt", "Ctrl", "Os", "Shift"]
+# # Possible Actions: [
+# #     "ToTop", "ToBottom",
+# #     "ScrollUp", "ScrollDown",
+# #     "PageUp", "PageDown",
+# #     "ZoomIn", "ZoomOut", "ZoomReset",
+# #     "Copy",
+# #     "Quit",
+# # ]
+# # Possible Keys: [
+# #     "a"-"z",
+# #     "0"-"9",
+# #     "`", "@", "*", "-", "=", "+", "[", "]", "\\", ";", ":", "'", ",", ".",
+# #     "/",
+# #     "F1"-"F12",
+# #     "Up", "Down", "Left", "Right",
+# #     "Enter", "Space", "Tab", Backspace", "Escape", PageUp", "PageDown",
+# #     "Home", "End", "Delete", "Insert"
+# # ]
+[keybindings]
+# # Base will override the defaults if set
+# # Default: Not set
+base = [
+    ["ToTop",      ["g", "g"]],
+    ["ToTop",      ["g", "e"]],
+    ["ScrollUp",   "k"],
+    ["ScrollDown", "j"],
+    # ["PageUp",     { key = "u", mod = ["Ctrl"] }],
+    # ["PageDown",   { key = "d", mod = ["Ctrl"] }],
+    ["Copy",       "y"],
+    ["Quit",       "q"],
+]
+# # Extra will be applied on top of base/defaults
+# extra = ... # Refer to `base`

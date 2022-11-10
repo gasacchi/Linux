@@ -32,14 +32,18 @@ alias gc="git commit"
 alias gs="git status"
 alias ga="git add"
 
-# Env
+# pnpm end Env
 set -gx EDITOR "hx"
-# pnpm path
-set -gx PATH "$HOME/.local/share/pnpm:$PATH"
+
 # local bin
 set -gx PATH "$HOME/.local/bin:$PATH"
+
 # rust path
 set -gx PATH "$HOME/.cargo/bin:$PATH"
+
+## pnpm
+set -gx PNPM_HOME "/home/gasacchi/.local/share/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
 
 # if status is-interactive
 #     # Commands to run in interactive sessions can go here
@@ -47,3 +51,4 @@ set -gx PATH "$HOME/.cargo/bin:$PATH"
 
 
 starship init fish | source
+
