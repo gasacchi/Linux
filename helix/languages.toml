@@ -51,7 +51,7 @@ source = { git = "https://github.com/jaredramirez/tree-sitter-rescript", rev = "
 name = "scheme"
 scope = "source.scheme"
 injection-regex = "scheme"
-file-types = ["ss", "rkt", "yoru"] # "scm",
+file-types = ["ss", "rkt", "gex"] # "scm",
 roots = []
 comment-token = ";"
 indent = { tab-width = 2, unit = "  " }
