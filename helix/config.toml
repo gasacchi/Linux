@@ -4,32 +4,41 @@
 
 # Theme ----------------------------------------------------------------------
 theme                       = "catppuccin_mocha_no_italic"
+# ----------------------------------------------------------------------------
 
 # Editor ---------------------------------------------------------------------
 [editor]
-scrolloff                   = 5
-mouse                       = true
-middle-click-paste          = true
+scrolloff                   = 10
+mouse                       = true # default
+middle-click-paste          = true # default
 scroll-lines                = 5
-shell                       = ["nu", "-c"]
+shell                       = ["fish", "-c"]
 line-number                 = "relative"
 cursorline                  = true
-gutters                     = ["spacer", "diagnostics"]
-auto-completion             = true
-auto-format                 = true
+cursorcolumn                = true
+gutters                     = ["diagnostics", "line-numbers", "spacer"]
+auto-completion             = true # default
+auto-format                 = true # default
+auto-save                   = false # default
 idle-timeout                = 0
 completion-trigger-len      = 1
-auto-info                   = true
-true-color                  = false
+auto-info                   = true # default
+true-color                  = false # default 
 rulers                      = [80,]
 bufferline                  = "always"
 color-modes                 = true
+# ----------------------------------------------------------------------------
 
 
 # Statusline -----------------------------------------------------------------
 [editor.statusline]
 left                        = ["mode", "file-name", "selections"]
-center                      = ["spinner", "file-type", "diagnostics"]
+center                      = ["spinner",
+  "file-type",
+  "diagnostics",
+  "spacer",
+  "workspace-diagnostics",
+]
 right                       = [
   "position",
   "position-percentage",
@@ -37,33 +46,36 @@ right                       = [
   "file-encoding",
   "file-line-ending"
 ]
-# bug not change the separator
 separator                   = "│"
-mode.normal                 = "Normal"
-mode.insert                 = "Insert"
-mode.select                 = "Select"
+mode.normal                 = "normal"
+mode.insert                 = "insert"
+mode.select                 = "select"
+# ----------------------------------------------------------------------------
 
 # LSP -------------------------------------------------------------------------
 [editor.lsp]
 display-messages            = true
 auto-signature-help         = true
 display-signature-help-docs = true
+# ----------------------------------------------------------------------------
 
 # Cursor ----------------------------------------------------------------------
 [editor.cursor-shape]
 insert                      = "bar"
 normal                      = "block"
 select                      = "underline"
+# ----------------------------------------------------------------------------
 
 # File picker -----------------------------------------------------------------
 [editor.file-picker]
-hidden                      = true
-parents                     = true
-ignore                      = true
-git-ignore                  = true
-git-global                  = true
-git-exclude                 = true
-max-depth                   = 3
+hidden                      = true # default
+parents                     = true # default
+ignore                      = true # default
+git-ignore                  = true # default
+git-global                  = true # default
+git-exclude                 = true # default
+max-depth                   = 5
+# ----------------------------------------------------------------------------
 
 # Default auto-pairs can be overdrives by [[language]] ------------------------
 [editor.auto-pairs]
@@ -74,12 +86,13 @@ max-depth                   = 3
 '`'                         = '`'
 '<'                         = '>'
 "'"                         = "'"
+# ----------------------------------------------------------------------------
 
 # Search ----------------------------------------------------------------------
 [editor.search]
-smart-case                  = true
-wrap-around                 = true
-
+smart-case                  = true # default
+wrap-around                 = true # default
+# ----------------------------------------------------------------------------
 
 # Whitespace Render -----------------------------------------------------------
 [editor.whitespace]
@@ -90,20 +103,23 @@ space                       = "·"
 nbsp                        = "⍽"
 tab                         = "→"
 newline                     = "⏎"
+tabpad                      = "·"
+# ----------------------------------------------------------------------------
 
+# Indent guides --------------------------------------------------------------
 [editor.indent-guides]
 render                      = true
 character                   = "│"
 skip-levels                 = 0
+# ----------------------------------------------------------------------------
 
-# -----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # Keymaps
 # Rebindings for decumentation purpose
-#------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
 
-# Normal
+# Normal ---------------------------------------------------------------------
 [keys.normal]
-# Movement
 h                           = "move_char_left"
 left                        = "no_op"
 l                           = "move_char_right"
