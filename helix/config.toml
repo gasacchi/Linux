@@ -120,6 +120,7 @@ skip-levels                 = 0
 
 # Normal ---------------------------------------------------------------------
 [keys.normal]
+# Navigations
 h                           = "move_char_left"
 left                        = "no_op"
 l                           = "move_char_right"
@@ -128,6 +129,7 @@ j                           = "move_line_down"
 down                        = "no_op"
 k                           = "move_line_up"
 up                          = "no_op"
+
 w                           = "move_next_word_start"
 e                           = "move_next_word_end"
 b                           = "move_prev_word_start"
@@ -141,6 +143,8 @@ F                           = "find_prev_char"
 G                           = "goto_line"
 ";"                         = "repeat_last_motion"
 "A-."                       = "no_op"
+home                        = "no_op"
+end                         = "no_op"
 "C-f"                       = "page_down"
 pagedown                    = "no_op"
 "C-b"                       = "page_up"
@@ -149,6 +153,7 @@ pageup                      = "no_op"
 "C-d"                       = "half_page_down"
 "C-h"                       = "jump_backward"
 "C-l"                       = "jump_forward"
+"C-s"                       = "save_selection"
 
 # Changes
 r                           = "replace"
@@ -179,14 +184,11 @@ c                           = "change_selection"
 "C-x"                       = "decrement"
 "q"                         = "replay_macro"
 "Q"                         = "record_macro"
-
-# Change default no_op
 "A-u"                       = "no_op" # move backward history
 "A-U"                       = "no_op" # move farward history
 
 # SHELL
 # TODO: mappings
-
 
 # Selection Manipulation
 s                           = "select_regex"
@@ -214,6 +216,7 @@ K                           = "keep_selections"
 "C-o"                       = "expand_selection"
 "A-up"                      = "no_op"
 "C-i"                       = "shrink_selection"
+"A-i"                       = "no_op"
 "A-down"                    = "no_op"
 "C-p"                       = "select_prev_sibling"
 "A-left"                    = "no_op"
@@ -229,8 +232,6 @@ K                           = "keep_selections"
 "*"                         = "search_selection"
 
 # default normal mode no_op
-home                        = "no_op"
-end                         = "no_op"
 "C-w"                       = "no_op"
 "["                         = "no_op"
 "]"                         = "no_op"
