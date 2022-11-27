@@ -99,7 +99,7 @@ local pane = {
 local external = {
   { key = 'g',
     mods   = 'LEADER',
-    action = act.SpawnCommandInNewTab { args = { 'fish', '-C', 'gitui' } }
+    action = act.SpawnCommandInNewTab { args = { 'fish', '-c', 'gitui' } }
   },
   { key = 'B',
     mods   = 'LEADER|SHIFT',
