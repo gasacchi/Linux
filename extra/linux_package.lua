@@ -56,10 +56,12 @@ local dev_tool = {
   { name = 'nodejs', desc = 'Nodejs js on backend' },
   { name = 'helix-git', desc = 'Helix text editor' },
   { name = 'wl-clipboard', desc = 'Wayland clipboard' },
-  { name = 'figma-linux-bin', desc = 'Web UI Design tools' },
   { name = 'pnpm-bin', desc = 'Better npm' },
   { name = 'lua-language-server', desc = 'lua language server' },
   { name = 'just', desc = 'Command runner like make' },
+  { name = 'lunacy-bin', desc = 'figma alternative' },
+  { name = 'tailwindcss-bin', desc = 'tailwindcss standalone' },
+  { name = 'trunk-bin', desc = 'wasm tooling' },
 }
 
 -- Tauri development
@@ -79,14 +81,16 @@ local tauri_dev = {
 
 -- pnpm global packages
 local pnpm = {
-  { name = '@prisma/language-server', desc = 'Prisma language server' },
+  { name = '@tailwindcss/language-server', desc = 'tailwindcss lsp' },
   { name = '@taplo/cli', desc = 'Toml linting' },
-  { name = 'svelte-language-server', desc = 'Svelte language server' },
-  { name = 'typescript', desc = 'Typescript programming language' },
-  { name = 'typescript-language-server', desc = 'Typescript language server' },
   { name = 'vscode-langservers-extracted', desc = 'Vscode extracted= css, html,json' },
   { name = 'yaml-language-server', desc = 'Yaml language server' },
 }
+
+local cargo = {
+  { name = 'cargo-watch', desc = 'watch cargo project' },
+}
+
 
 -- cli utility tools
 local cli_utils = {
@@ -118,6 +122,7 @@ local cli_utils = {
   { name = 'android-tools', desc = 'Android tools' },
   { name = 'yt-dlp', desc = 'Download youtube content' },
   { name = 'inlyne', desc = 'markdown viewer' },
+  { name = 'watchexec', desc = 'file watcher' },
 }
 
 -- pcb and 3d development tools
@@ -160,6 +165,7 @@ local dev = {
   hw_dev,
   tauri_dev,
   pnpm,
+  cargo,
   cli_utils,
 }
 
