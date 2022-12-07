@@ -12,6 +12,7 @@ events.register()
 
 return {
   disable_default_key_bindings = true,
+  check_for_updates = false,
   leader = {
     key = 't',
     mods = 'CTRL',
